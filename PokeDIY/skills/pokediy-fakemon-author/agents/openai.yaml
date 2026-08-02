@@ -1,0 +1,4 @@
+interface:
+  display_name: "PokeDIY Fakemon Author"
+  short_description: "创作、校验并生成统一平面立绘的原创宝可梦完整设定与数据"
+  default_prompt: "使用 $pokediy-fakemon-author 设计一只原创宝可梦，并输出可导入 PokeDIY 的完整设定与统一画风立绘。"

@@ -1,0 +1,22 @@
+{
+  "id": "pokediy-flat-v1",
+  "view": "single full-body creature in a neutral three-quarter front view, centered, all appendages visible, 10-14% even padding",
+  "linework": "opaque dark-charcoal contour with subtle thick-to-thin taper; heavier exterior contour and sparse thinner interior lines",
+  "color": "two to four crisp flat local colors plus at most one accent; closed opaque shapes with no texture",
+  "shading": "exactly one small hard-edged cel-shadow family covering roughly 10-18% of visible body area; tiny eye highlights only",
+  "background": "perfectly uniform solid chroma-key color with no cast shadow, contact shadow, gradient, texture, reflection, or floor plane",
+  "avoid": [
+    "photorealism",
+    "naturalistic animal anatomy",
+    "individual fur or hair strands",
+    "pores or scale microtexture",
+    "material texture",
+    "3D or PBR rendering",
+    "painterly or watercolor texture",
+    "airbrushed gradients or soft shading",
+    "rim light or cinematic lighting",
+    "depth of field or volumetric effects",
+    "dramatic action pose",
+    "scenery, text, logo, or watermark"
+  ]
+}

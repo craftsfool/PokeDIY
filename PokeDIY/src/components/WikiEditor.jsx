@@ -8,9 +8,10 @@ import {
   Plus,
   Save,
   Search,
+  Upload,
   X,
 } from "lucide-react";
-import { types } from "../data/library";
+import { initialDraft, types } from "../data/library";
 import {
   getEvolutionEntryLabel,
   normalizeEvolutionCondition,
@@ -37,6 +38,9 @@ const sectionLinks = [
   ["stats", "种族值"],
   ["publish", "预览与发布"],
 ];
+
+const isRecord = (value) =>
+  Boolean(value) && typeof value === "object" && !Array.isArray(value);
 
 function Field({ label, help, children, wide = false }) {
   return (
@@ -116,6 +120,7 @@ export function WikiEditor({
   onToast,
 }) {
   const fileRef = useRef(null);
+  const importFileRef = useRef(null);
   const [resourceQuery, setResourceQuery] = useState("");
   const [resourceKind, setResourceKind] = useState("全部");
   const [showCustom, setShowCustom] = useState(false);
@@ -288,6 +293,89 @@ export function WikiEditor({
     const reader = new FileReader();
     reader.onload = () => update("image", reader.result);
     reader.readAsDataURL(file);
+  };
+  const handleJsonImport = (event) => {
+    const file = event.target.files?.[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = () => {
+      try {
+        const parsed = JSON.parse(String(reader.result));
+        if (!parsed || Array.isArray(parsed) || typeof parsed !== "object")
+          throw new Error("JSON 根节点必须是对象");
+        const { exportedAt: _exportedAt, ...payload } = parsed;
+        const importedStats = isRecord(payload.stats)
+          ? Object.fromEntries(
+              Object.keys(initialDraft.stats).map((key) => {
+                const value = Number(payload.stats[key]);
+                return [
+                  key,
+                  Number.isFinite(value)
+                    ? Math.max(1, Math.min(255, value))
+                    : initialDraft.stats[key],
+                ];
+              }),
+            )
+          : initialDraft.stats;
+        const importedAbilitySelection = isRecord(payload.abilitySelection)
+          ? {
+              regular: Array.isArray(payload.abilitySelection.regular)
+                ? payload.abilitySelection.regular.filter(
+                    (id) => typeof id === "string",
+                  )
+                : [],
+              hidden:
+                typeof payload.abilitySelection.hidden === "string"
+                  ? payload.abilitySelection.hidden
+                  : "",
+            }
+          : initialDraft.abilitySelection;
+        const importedCondition = isRecord(payload.evolutionCondition)
+          ? {
+              ...initialDraft.evolutionCondition,
+              ...payload.evolutionCondition,
+              values: isRecord(payload.evolutionCondition.values)
+                ? payload.evolutionCondition.values
+                : {},
+            }
+          : initialDraft.evolutionCondition;
+        const image =
+          typeof payload.image === "string" &&
+          (!payload.image || payload.image.startsWith("data:image/"))
+            ? payload.image
+            : "";
+        setDraft({
+          ...initialDraft,
+          ...payload,
+          image,
+          types: Array.isArray(payload.types)
+            ? payload.types.filter((type) => types.includes(type)).slice(0, 2)
+            : [],
+          stats: importedStats,
+          abilitySelection: importedAbilitySelection,
+          evolutionCondition: importedCondition,
+          selected: Array.isArray(payload.selected)
+            ? payload.selected.filter((id) => typeof id === "string")
+            : [],
+          custom: Array.isArray(payload.custom)
+            ? payload.custom.filter(isRecord)
+            : [],
+          learnMethods: isRecord(payload.learnMethods)
+            ? payload.learnMethods
+            : {},
+        });
+        onToast("JSON 设定已导入");
+      } catch (error) {
+        onToast(error instanceof Error ? error.message : "JSON 导入失败");
+      } finally {
+        event.target.value = "";
+      }
+    };
+    reader.onerror = () => {
+      event.target.value = "";
+      onToast("无法读取 JSON 文件");
+    };
+    reader.readAsText(file);
   };
   const addCustom = () => {
     if (!custom.name.trim() || !custom.description.trim())
@@ -1004,6 +1092,20 @@ export function WikiEditor({
                 </span>
               </label>
               <div className="publish-actions">
+                <button
+                  className="wiki-button"
+                  onClick={() => importFileRef.current?.click()}
+                >
+                  <Upload size={15} />
+                  导入 JSON
+                </button>
+                <input
+                  ref={importFileRef}
+                  hidden
+                  type="file"
+                  accept="application/json,.json"
+                  onChange={handleJsonImport}
+                />
                 <button className="wiki-button" onClick={downloadJson}>
                   <Download size={15} />
                   下载 JSON
