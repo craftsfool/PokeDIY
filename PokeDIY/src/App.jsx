@@ -2,11 +2,13 @@ import { useEffect, useMemo, useState } from "react";
 import { CheckCircle2 } from "lucide-react";
 import { WikiHeader } from "./components/WikiHeader";
 import { WikiEditor } from "./components/WikiEditor";
+import { NationalPokedex } from "./components/NationalPokedex";
 import { initialDraft, library } from "./data/library";
 
 const storageKey = "poke-diy-draft-v4";
 
 export default function App() {
+  const [page, setPage] = useState(() => window.location.hash === "#pokedex" ? "pokedex" : "editor");
   const [draft, setDraft] = useState(() => {
     try {
       return {
@@ -31,6 +33,12 @@ export default function App() {
   );
 
   useEffect(() => {
+    const syncPage = () => setPage(window.location.hash === "#pokedex" ? "pokedex" : "editor");
+    window.addEventListener("hashchange", syncPage);
+    return () => window.removeEventListener("hashchange", syncPage);
+  }, []);
+  useEffect(() => {
+    if (page === "pokedex") return undefined;
     Promise.all([
       fetch("/national/national-pokedex.json").then((r) => r.json()),
       fetch("/national/pokemon-forms.json").then((r) => r.json()),
@@ -97,7 +105,7 @@ export default function App() {
         setReferenceResources([...abilities, ...moves]);
       })
       .catch(() => setReferenceResources([]));
-  }, []);
+  }, [page]);
   useEffect(() => {
     setSaved(false);
     const timer = setTimeout(() => {
@@ -115,22 +123,29 @@ export default function App() {
     setSaved(true);
     notify("草稿已保存");
   };
+  const openPage = (nextPage) => {
+    window.location.hash = nextPage === "pokedex" ? "pokedex" : "publish";
+    setPage(nextPage);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   return (
     <div className="mw-app">
       <WikiHeader />
-      <main className="mw-layout">
-        <WikiEditor
-          draft={draft}
-          setDraft={setDraft}
-          dexEntries={dexEntries}
-          evolutionMethods={evolutionMethods}
-          resources={resources}
-          saved={saved}
-          onSave={save}
-          onToast={notify}
-        />
-      </main>
+      {page === "pokedex" ? <NationalPokedex onOpenEditor={() => openPage("editor")} /> : (
+        <main className="mw-layout">
+          <WikiEditor
+            draft={draft}
+            setDraft={setDraft}
+            dexEntries={dexEntries}
+            evolutionMethods={evolutionMethods}
+            resources={resources}
+            saved={saved}
+            onSave={save}
+            onToast={notify}
+          />
+        </main>
+      )}
       {toast && (
         <div className="mw-toast" role="status">
           <CheckCircle2 size={17} />
