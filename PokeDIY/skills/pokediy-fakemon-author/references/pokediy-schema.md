@@ -35,7 +35,7 @@ PokeDIY imports a JSON object shaped like `src/data/library.js::initialDraft`. U
 
 ## Resource IDs
 
-Search `../data/reference/original-content.json` for official move and ability slugs. Search the national/form JSON files for exact Pokémon slugs. Never invent an official ID from an English name when the local dataset is available.
+Resolve the data root first: use `data/` from the Git worktree root or `../data/` from the `PokeDIY/` app directory. Search `reference/original-content.json` below it for official move and ability slugs. Search the national/form JSON files for exact Pokémon slugs. Never invent an official ID from an English name when the local dataset is available.
 
 Every referenced ability or move ID must appear in `selected`. Every original resource must have a unique stable ID beginning with `custom-`.
 
