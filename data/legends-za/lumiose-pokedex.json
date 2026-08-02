@@ -1,0 +1,5139 @@
+{
+  "schemaVersion": 1,
+  "game": "pokemon-legends-za",
+  "dex": "lumiose",
+  "scope": "base-game",
+  "generatedAt": "2026-07-13",
+  "counts": {
+    "total": 232,
+    "requiredForCompletion": 230,
+    "optionalEventEntries": 2
+  },
+  "sources": [
+    "https://pokemondb.net/pokedex/game/legends-z-a",
+    "https://raw.githubusercontent.com/PokeAPI/pokeapi/master/data/v2/csv/pokemon_species.csv",
+    "https://raw.githubusercontent.com/PokeAPI/pokeapi/master/data/v2/csv/pokemon_species_names.csv"
+  ],
+  "entries": [
+    {
+      "lumioseDex": 1,
+      "nationalDex": 152,
+      "slug": "chikorita",
+      "names": {
+        "zh-Hant": "菊草葉",
+        "en": "Chikorita",
+        "ja": "チコリータ",
+        "zh-Hans": "菊草叶"
+      },
+      "types": [
+        "grass"
+      ],
+      "typesZhHans": [
+        "草"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": true,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 2,
+      "nationalDex": 153,
+      "slug": "bayleef",
+      "names": {
+        "zh-Hant": "月桂葉",
+        "en": "Bayleef",
+        "ja": "ベイリーフ",
+        "zh-Hans": "月桂叶"
+      },
+      "types": [
+        "grass"
+      ],
+      "typesZhHans": [
+        "草"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 3,
+      "nationalDex": 154,
+      "slug": "meganium",
+      "names": {
+        "zh-Hant": "大竺葵",
+        "en": "Meganium",
+        "ja": "メガニウム",
+        "zh-Hans": "大竺葵"
+      },
+      "types": [
+        "grass"
+      ],
+      "typesZhHans": [
+        "草"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 4,
+      "nationalDex": 498,
+      "slug": "tepig",
+      "names": {
+        "zh-Hant": "暖暖豬",
+        "en": "Tepig",
+        "ja": "ポカブ",
+        "zh-Hans": "暖暖猪"
+      },
+      "types": [
+        "fire"
+      ],
+      "typesZhHans": [
+        "火"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": true,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 5,
+      "nationalDex": 499,
+      "slug": "pignite",
+      "names": {
+        "zh-Hant": "炒炒豬",
+        "en": "Pignite",
+        "ja": "チャオブー",
+        "zh-Hans": "炒炒猪"
+      },
+      "types": [
+        "fire",
+        "fighting"
+      ],
+      "typesZhHans": [
+        "火",
+        "格斗"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 6,
+      "nationalDex": 500,
+      "slug": "emboar",
+      "names": {
+        "zh-Hant": "炎武王",
+        "en": "Emboar",
+        "ja": "エンブオー",
+        "zh-Hans": "炎武王"
+      },
+      "types": [
+        "fire",
+        "fighting"
+      ],
+      "typesZhHans": [
+        "火",
+        "格斗"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 7,
+      "nationalDex": 158,
+      "slug": "totodile",
+      "names": {
+        "zh-Hant": "小鋸鱷",
+        "en": "Totodile",
+        "ja": "ワニノコ",
+        "zh-Hans": "小锯鳄"
+      },
+      "types": [
+        "water"
+      ],
+      "typesZhHans": [
+        "水"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": true,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 8,
+      "nationalDex": 159,
+      "slug": "croconaw",
+      "names": {
+        "zh-Hant": "藍鱷",
+        "en": "Croconaw",
+        "ja": "アリゲイツ",
+        "zh-Hans": "蓝鳄"
+      },
+      "types": [
+        "water"
+      ],
+      "typesZhHans": [
+        "水"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 9,
+      "nationalDex": 160,
+      "slug": "feraligatr",
+      "names": {
+        "zh-Hant": "大力鱷",
+        "en": "Feraligatr",
+        "ja": "オーダイル",
+        "zh-Hans": "大力鳄"
+      },
+      "types": [
+        "water"
+      ],
+      "typesZhHans": [
+        "水"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 10,
+      "nationalDex": 661,
+      "slug": "fletchling",
+      "names": {
+        "zh-Hant": "小箭雀",
+        "en": "Fletchling",
+        "ja": "ヤヤコマ",
+        "zh-Hans": "小箭雀"
+      },
+      "types": [
+        "normal",
+        "flying"
+      ],
+      "typesZhHans": [
+        "一般",
+        "飞行"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 11,
+      "nationalDex": 662,
+      "slug": "fletchinder",
+      "names": {
+        "zh-Hant": "火箭雀",
+        "en": "Fletchinder",
+        "ja": "ヒノヤコマ",
+        "zh-Hans": "火箭雀"
+      },
+      "types": [
+        "fire",
+        "flying"
+      ],
+      "typesZhHans": [
+        "火",
+        "飞行"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 12,
+      "nationalDex": 663,
+      "slug": "talonflame",
+      "names": {
+        "zh-Hant": "烈箭鷹",
+        "en": "Talonflame",
+        "ja": "ファイアロー",
+        "zh-Hans": "烈箭鹰"
+      },
+      "types": [
+        "fire",
+        "flying"
+      ],
+      "typesZhHans": [
+        "火",
+        "飞行"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 13,
+      "nationalDex": 659,
+      "slug": "bunnelby",
+      "names": {
+        "zh-Hant": "掘掘兔",
+        "en": "Bunnelby",
+        "ja": "ホルビー",
+        "zh-Hans": "掘掘兔"
+      },
+      "types": [
+        "normal"
+      ],
+      "typesZhHans": [
+        "一般"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 14,
+      "nationalDex": 660,
+      "slug": "diggersby",
+      "names": {
+        "zh-Hant": "掘地兔",
+        "en": "Diggersby",
+        "ja": "ホルード",
+        "zh-Hans": "掘地兔"
+      },
+      "types": [
+        "normal",
+        "ground"
+      ],
+      "typesZhHans": [
+        "一般",
+        "地面"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 15,
+      "nationalDex": 664,
+      "slug": "scatterbug",
+      "names": {
+        "zh-Hant": "粉蝶蟲",
+        "en": "Scatterbug",
+        "ja": "コフキムシ",
+        "zh-Hans": "粉蝶虫"
+      },
+      "types": [
+        "bug"
+      ],
+      "typesZhHans": [
+        "虫"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 16,
+      "nationalDex": 665,
+      "slug": "spewpa",
+      "names": {
+        "zh-Hant": "粉蝶蛹",
+        "en": "Spewpa",
+        "ja": "コフーライ",
+        "zh-Hans": "粉蝶蛹"
+      },
+      "types": [
+        "bug"
+      ],
+      "typesZhHans": [
+        "虫"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 17,
+      "nationalDex": 666,
+      "slug": "vivillon",
+      "names": {
+        "zh-Hant": "彩粉蝶",
+        "en": "Vivillon",
+        "ja": "ビビヨン",
+        "zh-Hans": "彩粉蝶"
+      },
+      "types": [
+        "bug",
+        "flying"
+      ],
+      "typesZhHans": [
+        "虫",
+        "飞行"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 18,
+      "nationalDex": 13,
+      "slug": "weedle",
+      "names": {
+        "zh-Hant": "獨角蟲",
+        "en": "Weedle",
+        "ja": "ビードル",
+        "zh-Hans": "独角虫"
+      },
+      "types": [
+        "bug",
+        "poison"
+      ],
+      "typesZhHans": [
+        "虫",
+        "毒"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 19,
+      "nationalDex": 14,
+      "slug": "kakuna",
+      "names": {
+        "zh-Hant": "鐵殼蛹",
+        "en": "Kakuna",
+        "ja": "コクーン",
+        "zh-Hans": "铁壳蛹"
+      },
+      "types": [
+        "bug",
+        "poison"
+      ],
+      "typesZhHans": [
+        "虫",
+        "毒"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 20,
+      "nationalDex": 15,
+      "slug": "beedrill",
+      "names": {
+        "zh-Hant": "大針蜂",
+        "en": "Beedrill",
+        "ja": "スピアー",
+        "zh-Hans": "大针蜂"
+      },
+      "types": [
+        "bug",
+        "poison"
+      ],
+      "typesZhHans": [
+        "虫",
+        "毒"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 21,
+      "nationalDex": 16,
+      "slug": "pidgey",
+      "names": {
+        "zh-Hant": "波波",
+        "en": "Pidgey",
+        "ja": "ポッポ",
+        "zh-Hans": "波波"
+      },
+      "types": [
+        "normal",
+        "flying"
+      ],
+      "typesZhHans": [
+        "一般",
+        "飞行"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 22,
+      "nationalDex": 17,
+      "slug": "pidgeotto",
+      "names": {
+        "zh-Hant": "比比鳥",
+        "en": "Pidgeotto",
+        "ja": "ピジョン",
+        "zh-Hans": "比比鸟"
+      },
+      "types": [
+        "normal",
+        "flying"
+      ],
+      "typesZhHans": [
+        "一般",
+        "飞行"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 23,
+      "nationalDex": 18,
+      "slug": "pidgeot",
+      "names": {
+        "zh-Hant": "大比鳥",
+        "en": "Pidgeot",
+        "ja": "ピジョット",
+        "zh-Hans": "大比鸟"
+      },
+      "types": [
+        "normal",
+        "flying"
+      ],
+      "typesZhHans": [
+        "一般",
+        "飞行"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 24,
+      "nationalDex": 179,
+      "slug": "mareep",
+      "names": {
+        "zh-Hant": "咩利羊",
+        "en": "Mareep",
+        "ja": "メリープ",
+        "zh-Hans": "咩利羊"
+      },
+      "types": [
+        "electric"
+      ],
+      "typesZhHans": [
+        "电"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 25,
+      "nationalDex": 180,
+      "slug": "flaaffy",
+      "names": {
+        "zh-Hant": "茸茸羊",
+        "en": "Flaaffy",
+        "ja": "モココ",
+        "zh-Hans": "茸茸羊"
+      },
+      "types": [
+        "electric"
+      ],
+      "typesZhHans": [
+        "电"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 26,
+      "nationalDex": 181,
+      "slug": "ampharos",
+      "names": {
+        "zh-Hant": "電龍",
+        "en": "Ampharos",
+        "ja": "デンリュウ",
+        "zh-Hans": "电龙"
+      },
+      "types": [
+        "electric"
+      ],
+      "typesZhHans": [
+        "电"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 27,
+      "nationalDex": 504,
+      "slug": "patrat",
+      "names": {
+        "zh-Hant": "探探鼠",
+        "en": "Patrat",
+        "ja": "ミネズミ",
+        "zh-Hans": "探探鼠"
+      },
+      "types": [
+        "normal"
+      ],
+      "typesZhHans": [
+        "一般"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 28,
+      "nationalDex": 505,
+      "slug": "watchog",
+      "names": {
+        "zh-Hant": "步哨鼠",
+        "en": "Watchog",
+        "ja": "ミルホッグ",
+        "zh-Hans": "步哨鼠"
+      },
+      "types": [
+        "normal"
+      ],
+      "typesZhHans": [
+        "一般"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 29,
+      "nationalDex": 406,
+      "slug": "budew",
+      "names": {
+        "zh-Hant": "含羞苞",
+        "en": "Budew",
+        "ja": "スボミー",
+        "zh-Hans": "含羞苞"
+      },
+      "types": [
+        "grass",
+        "poison"
+      ],
+      "typesZhHans": [
+        "草",
+        "毒"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 30,
+      "nationalDex": 315,
+      "slug": "roselia",
+      "names": {
+        "zh-Hant": "毒薔薇",
+        "en": "Roselia",
+        "ja": "ロゼリア",
+        "zh-Hans": "毒蔷薇"
+      },
+      "types": [
+        "grass",
+        "poison"
+      ],
+      "typesZhHans": [
+        "草",
+        "毒"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 31,
+      "nationalDex": 407,
+      "slug": "roserade",
+      "names": {
+        "zh-Hant": "羅絲雷朵",
+        "en": "Roserade",
+        "ja": "ロズレイド",
+        "zh-Hans": "罗丝雷朵"
+      },
+      "types": [
+        "grass",
+        "poison"
+      ],
+      "typesZhHans": [
+        "草",
+        "毒"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 32,
+      "nationalDex": 129,
+      "slug": "magikarp",
+      "names": {
+        "zh-Hant": "鯉魚王",
+        "en": "Magikarp",
+        "ja": "コイキング",
+        "zh-Hans": "鲤鱼王"
+      },
+      "types": [
+        "water"
+      ],
+      "typesZhHans": [
+        "水"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 33,
+      "nationalDex": 130,
+      "slug": "gyarados",
+      "names": {
+        "zh-Hant": "暴鯉龍",
+        "en": "Gyarados",
+        "ja": "ギャラドス",
+        "zh-Hans": "暴鲤龙"
+      },
+      "types": [
+        "water",
+        "flying"
+      ],
+      "typesZhHans": [
+        "水",
+        "飞行"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 34,
+      "nationalDex": 688,
+      "slug": "binacle",
+      "names": {
+        "zh-Hant": "龜腳腳",
+        "en": "Binacle",
+        "ja": "カメテテ",
+        "zh-Hans": "龟脚脚"
+      },
+      "types": [
+        "rock",
+        "water"
+      ],
+      "typesZhHans": [
+        "岩石",
+        "水"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 35,
+      "nationalDex": 689,
+      "slug": "barbaracle",
+      "names": {
+        "zh-Hant": "龜足巨鎧",
+        "en": "Barbaracle",
+        "ja": "ガメノデス",
+        "zh-Hans": "龟足巨铠"
+      },
+      "types": [
+        "rock",
+        "water"
+      ],
+      "typesZhHans": [
+        "岩石",
+        "水"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 36,
+      "nationalDex": 120,
+      "slug": "staryu",
+      "names": {
+        "zh-Hant": "海星星",
+        "en": "Staryu",
+        "ja": "ヒトデマン",
+        "zh-Hans": "海星星"
+      },
+      "types": [
+        "water"
+      ],
+      "typesZhHans": [
+        "水"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 37,
+      "nationalDex": 121,
+      "slug": "starmie",
+      "names": {
+        "zh-Hant": "寶石海星",
+        "en": "Starmie",
+        "ja": "スターミー",
+        "zh-Hans": "宝石海星"
+      },
+      "types": [
+        "water",
+        "psychic"
+      ],
+      "typesZhHans": [
+        "水",
+        "超能力"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 38,
+      "nationalDex": 669,
+      "slug": "flabebe",
+      "names": {
+        "zh-Hant": "花蓓蓓",
+        "en": "Flabébé",
+        "ja": "フラベベ",
+        "zh-Hans": "花蓓蓓"
+      },
+      "types": [
+        "fairy"
+      ],
+      "typesZhHans": [
+        "妖精"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 39,
+      "nationalDex": 670,
+      "slug": "floette",
+      "names": {
+        "zh-Hant": "花葉蒂",
+        "en": "Floette",
+        "ja": "フラエッテ",
+        "zh-Hans": "花叶蒂"
+      },
+      "types": [
+        "fairy"
+      ],
+      "typesZhHans": [
+        "妖精"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 40,
+      "nationalDex": 671,
+      "slug": "florges",
+      "names": {
+        "zh-Hant": "花潔夫人",
+        "en": "Florges",
+        "ja": "フラージェス",
+        "zh-Hans": "花洁夫人"
+      },
+      "types": [
+        "fairy"
+      ],
+      "typesZhHans": [
+        "妖精"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 41,
+      "nationalDex": 672,
+      "slug": "skiddo",
+      "names": {
+        "zh-Hant": "坐騎小羊",
+        "en": "Skiddo",
+        "ja": "メェークル",
+        "zh-Hans": "坐骑小羊"
+      },
+      "types": [
+        "grass"
+      ],
+      "typesZhHans": [
+        "草"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 42,
+      "nationalDex": 673,
+      "slug": "gogoat",
+      "names": {
+        "zh-Hant": "坐騎山羊",
+        "en": "Gogoat",
+        "ja": "ゴーゴート",
+        "zh-Hans": "坐骑山羊"
+      },
+      "types": [
+        "grass"
+      ],
+      "typesZhHans": [
+        "草"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 43,
+      "nationalDex": 677,
+      "slug": "espurr",
+      "names": {
+        "zh-Hant": "妙喵",
+        "en": "Espurr",
+        "ja": "ニャスパー",
+        "zh-Hans": "妙喵"
+      },
+      "types": [
+        "psychic"
+      ],
+      "typesZhHans": [
+        "超能力"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 44,
+      "nationalDex": 678,
+      "slug": "meowstic",
+      "names": {
+        "zh-Hant": "超能妙喵",
+        "en": "Meowstic",
+        "ja": "ニャオニクス",
+        "zh-Hans": "超能妙喵"
+      },
+      "types": [
+        "psychic"
+      ],
+      "typesZhHans": [
+        "超能力"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 45,
+      "nationalDex": 667,
+      "slug": "litleo",
+      "names": {
+        "zh-Hant": "小獅獅",
+        "en": "Litleo",
+        "ja": "シシコ",
+        "zh-Hans": "小狮狮"
+      },
+      "types": [
+        "fire",
+        "normal"
+      ],
+      "typesZhHans": [
+        "火",
+        "一般"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 46,
+      "nationalDex": 668,
+      "slug": "pyroar",
+      "names": {
+        "zh-Hant": "火炎獅",
+        "en": "Pyroar",
+        "ja": "カエンジシ",
+        "zh-Hans": "火炎狮"
+      },
+      "types": [
+        "fire",
+        "normal"
+      ],
+      "typesZhHans": [
+        "火",
+        "一般"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 47,
+      "nationalDex": 674,
+      "slug": "pancham",
+      "names": {
+        "zh-Hant": "頑皮熊貓",
+        "en": "Pancham",
+        "ja": "ヤンチャム",
+        "zh-Hans": "顽皮熊猫"
+      },
+      "types": [
+        "fighting"
+      ],
+      "typesZhHans": [
+        "格斗"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 48,
+      "nationalDex": 675,
+      "slug": "pangoro",
+      "names": {
+        "zh-Hant": "流氓熊貓",
+        "en": "Pangoro",
+        "ja": "ゴロンダ",
+        "zh-Hans": "霸道熊猫"
+      },
+      "types": [
+        "fighting",
+        "dark"
+      ],
+      "typesZhHans": [
+        "格斗",
+        "恶"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 49,
+      "nationalDex": 568,
+      "slug": "trubbish",
+      "names": {
+        "zh-Hant": "破破袋",
+        "en": "Trubbish",
+        "ja": "ヤブクロン",
+        "zh-Hans": "破破袋"
+      },
+      "types": [
+        "poison"
+      ],
+      "typesZhHans": [
+        "毒"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 50,
+      "nationalDex": 569,
+      "slug": "garbodor",
+      "names": {
+        "zh-Hant": "灰塵山",
+        "en": "Garbodor",
+        "ja": "ダストダス",
+        "zh-Hans": "灰尘山"
+      },
+      "types": [
+        "poison"
+      ],
+      "typesZhHans": [
+        "毒"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 51,
+      "nationalDex": 702,
+      "slug": "dedenne",
+      "names": {
+        "zh-Hant": "咚咚鼠",
+        "en": "Dedenne",
+        "ja": "デデンネ",
+        "zh-Hans": "咚咚鼠"
+      },
+      "types": [
+        "electric",
+        "fairy"
+      ],
+      "typesZhHans": [
+        "电",
+        "妖精"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 52,
+      "nationalDex": 172,
+      "slug": "pichu",
+      "names": {
+        "zh-Hant": "皮丘",
+        "en": "Pichu",
+        "ja": "ピチュー",
+        "zh-Hans": "皮丘"
+      },
+      "types": [
+        "electric"
+      ],
+      "typesZhHans": [
+        "电"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 53,
+      "nationalDex": 25,
+      "slug": "pikachu",
+      "names": {
+        "zh-Hant": "皮卡丘",
+        "en": "Pikachu",
+        "ja": "ピカチュウ",
+        "zh-Hans": "皮卡丘"
+      },
+      "types": [
+        "electric"
+      ],
+      "typesZhHans": [
+        "电"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 54,
+      "nationalDex": 26,
+      "slug": "raichu",
+      "names": {
+        "zh-Hant": "雷丘",
+        "en": "Raichu",
+        "ja": "ライチュウ",
+        "zh-Hans": "雷丘"
+      },
+      "types": [
+        "electric"
+      ],
+      "typesZhHans": [
+        "电"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 55,
+      "nationalDex": 173,
+      "slug": "cleffa",
+      "names": {
+        "zh-Hant": "皮寶寶",
+        "en": "Cleffa",
+        "ja": "ピィ",
+        "zh-Hans": "皮宝宝"
+      },
+      "types": [
+        "fairy"
+      ],
+      "typesZhHans": [
+        "妖精"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 56,
+      "nationalDex": 35,
+      "slug": "clefairy",
+      "names": {
+        "zh-Hant": "皮皮",
+        "en": "Clefairy",
+        "ja": "ピッピ",
+        "zh-Hans": "皮皮"
+      },
+      "types": [
+        "fairy"
+      ],
+      "typesZhHans": [
+        "妖精"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 57,
+      "nationalDex": 36,
+      "slug": "clefable",
+      "names": {
+        "zh-Hant": "皮可西",
+        "en": "Clefable",
+        "ja": "ピクシー",
+        "zh-Hans": "皮可西"
+      },
+      "types": [
+        "fairy"
+      ],
+      "typesZhHans": [
+        "妖精"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 58,
+      "nationalDex": 167,
+      "slug": "spinarak",
+      "names": {
+        "zh-Hant": "圓絲蛛",
+        "en": "Spinarak",
+        "ja": "イトマル",
+        "zh-Hans": "圆丝蛛"
+      },
+      "types": [
+        "bug",
+        "poison"
+      ],
+      "typesZhHans": [
+        "虫",
+        "毒"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 59,
+      "nationalDex": 168,
+      "slug": "ariados",
+      "names": {
+        "zh-Hant": "阿利多斯",
+        "en": "Ariados",
+        "ja": "アリアドス",
+        "zh-Hans": "阿利多斯"
+      },
+      "types": [
+        "bug",
+        "poison"
+      ],
+      "typesZhHans": [
+        "虫",
+        "毒"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 60,
+      "nationalDex": 23,
+      "slug": "ekans",
+      "names": {
+        "zh-Hant": "阿柏蛇",
+        "en": "Ekans",
+        "ja": "アーボ",
+        "zh-Hans": "阿柏蛇"
+      },
+      "types": [
+        "poison"
+      ],
+      "typesZhHans": [
+        "毒"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 61,
+      "nationalDex": 24,
+      "slug": "arbok",
+      "names": {
+        "zh-Hant": "阿柏怪",
+        "en": "Arbok",
+        "ja": "アーボック",
+        "zh-Hans": "阿柏怪"
+      },
+      "types": [
+        "poison"
+      ],
+      "typesZhHans": [
+        "毒"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 62,
+      "nationalDex": 63,
+      "slug": "abra",
+      "names": {
+        "zh-Hant": "凱西",
+        "en": "Abra",
+        "ja": "ケーシィ",
+        "zh-Hans": "凯西"
+      },
+      "types": [
+        "psychic"
+      ],
+      "typesZhHans": [
+        "超能力"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 63,
+      "nationalDex": 64,
+      "slug": "kadabra",
+      "names": {
+        "zh-Hant": "勇基拉",
+        "en": "Kadabra",
+        "ja": "ユンゲラー",
+        "zh-Hans": "勇基拉"
+      },
+      "types": [
+        "psychic"
+      ],
+      "typesZhHans": [
+        "超能力"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 64,
+      "nationalDex": 65,
+      "slug": "alakazam",
+      "names": {
+        "zh-Hant": "胡地",
+        "en": "Alakazam",
+        "ja": "フーディン",
+        "zh-Hans": "胡地"
+      },
+      "types": [
+        "psychic"
+      ],
+      "typesZhHans": [
+        "超能力"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 65,
+      "nationalDex": 92,
+      "slug": "gastly",
+      "names": {
+        "zh-Hant": "鬼斯",
+        "en": "Gastly",
+        "ja": "ゴース",
+        "zh-Hans": "鬼斯"
+      },
+      "types": [
+        "ghost",
+        "poison"
+      ],
+      "typesZhHans": [
+        "幽灵",
+        "毒"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 66,
+      "nationalDex": 93,
+      "slug": "haunter",
+      "names": {
+        "zh-Hant": "鬼斯通",
+        "en": "Haunter",
+        "ja": "ゴースト",
+        "zh-Hans": "鬼斯通"
+      },
+      "types": [
+        "ghost",
+        "poison"
+      ],
+      "typesZhHans": [
+        "幽灵",
+        "毒"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 67,
+      "nationalDex": 94,
+      "slug": "gengar",
+      "names": {
+        "zh-Hant": "耿鬼",
+        "en": "Gengar",
+        "ja": "ゲンガー",
+        "zh-Hans": "耿鬼"
+      },
+      "types": [
+        "ghost",
+        "poison"
+      ],
+      "typesZhHans": [
+        "幽灵",
+        "毒"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 68,
+      "nationalDex": 543,
+      "slug": "venipede",
+      "names": {
+        "zh-Hant": "百足蜈蚣",
+        "en": "Venipede",
+        "ja": "フシデ",
+        "zh-Hans": "百足蜈蚣"
+      },
+      "types": [
+        "bug",
+        "poison"
+      ],
+      "typesZhHans": [
+        "虫",
+        "毒"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 69,
+      "nationalDex": 544,
+      "slug": "whirlipede",
+      "names": {
+        "zh-Hant": "車輪毬",
+        "en": "Whirlipede",
+        "ja": "ホイーガ",
+        "zh-Hans": "车轮球"
+      },
+      "types": [
+        "bug",
+        "poison"
+      ],
+      "typesZhHans": [
+        "虫",
+        "毒"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 70,
+      "nationalDex": 545,
+      "slug": "scolipede",
+      "names": {
+        "zh-Hant": "蜈蚣王",
+        "en": "Scolipede",
+        "ja": "ペンドラー",
+        "zh-Hans": "蜈蚣王"
+      },
+      "types": [
+        "bug",
+        "poison"
+      ],
+      "typesZhHans": [
+        "虫",
+        "毒"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 71,
+      "nationalDex": 679,
+      "slug": "honedge",
+      "names": {
+        "zh-Hant": "獨劍鞘",
+        "en": "Honedge",
+        "ja": "ヒトツキ",
+        "zh-Hans": "独剑鞘"
+      },
+      "types": [
+        "steel",
+        "ghost"
+      ],
+      "typesZhHans": [
+        "钢",
+        "幽灵"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 72,
+      "nationalDex": 680,
+      "slug": "doublade",
+      "names": {
+        "zh-Hant": "雙劍鞘",
+        "en": "Doublade",
+        "ja": "ニダンギル",
+        "zh-Hans": "双剑鞘"
+      },
+      "types": [
+        "steel",
+        "ghost"
+      ],
+      "typesZhHans": [
+        "钢",
+        "幽灵"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 73,
+      "nationalDex": 681,
+      "slug": "aegislash",
+      "names": {
+        "zh-Hant": "堅盾劍怪",
+        "en": "Aegislash",
+        "ja": "ギルガルド",
+        "zh-Hans": "坚盾剑怪"
+      },
+      "types": [
+        "steel",
+        "ghost"
+      ],
+      "typesZhHans": [
+        "钢",
+        "幽灵"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 74,
+      "nationalDex": 69,
+      "slug": "bellsprout",
+      "names": {
+        "zh-Hant": "喇叭芽",
+        "en": "Bellsprout",
+        "ja": "マダツボミ",
+        "zh-Hans": "喇叭芽"
+      },
+      "types": [
+        "grass",
+        "poison"
+      ],
+      "typesZhHans": [
+        "草",
+        "毒"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 75,
+      "nationalDex": 70,
+      "slug": "weepinbell",
+      "names": {
+        "zh-Hant": "口呆花",
+        "en": "Weepinbell",
+        "ja": "ウツドン",
+        "zh-Hans": "口呆花"
+      },
+      "types": [
+        "grass",
+        "poison"
+      ],
+      "typesZhHans": [
+        "草",
+        "毒"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 76,
+      "nationalDex": 71,
+      "slug": "victreebel",
+      "names": {
+        "zh-Hant": "大食花",
+        "en": "Victreebel",
+        "ja": "ウツボット",
+        "zh-Hans": "大食花"
+      },
+      "types": [
+        "grass",
+        "poison"
+      ],
+      "typesZhHans": [
+        "草",
+        "毒"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 77,
+      "nationalDex": 511,
+      "slug": "pansage",
+      "names": {
+        "zh-Hant": "花椰猴",
+        "en": "Pansage",
+        "ja": "ヤナップ",
+        "zh-Hans": "花椰猴"
+      },
+      "types": [
+        "grass"
+      ],
+      "typesZhHans": [
+        "草"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 78,
+      "nationalDex": 512,
+      "slug": "simisage",
+      "names": {
+        "zh-Hant": "花椰猿",
+        "en": "Simisage",
+        "ja": "ヤナッキー",
+        "zh-Hans": "花椰猿"
+      },
+      "types": [
+        "grass"
+      ],
+      "typesZhHans": [
+        "草"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 79,
+      "nationalDex": 513,
+      "slug": "pansear",
+      "names": {
+        "zh-Hant": "爆香猴",
+        "en": "Pansear",
+        "ja": "バオップ",
+        "zh-Hans": "爆香猴"
+      },
+      "types": [
+        "fire"
+      ],
+      "typesZhHans": [
+        "火"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 80,
+      "nationalDex": 514,
+      "slug": "simisear",
+      "names": {
+        "zh-Hant": "爆香猿",
+        "en": "Simisear",
+        "ja": "バオッキー",
+        "zh-Hans": "爆香猿"
+      },
+      "types": [
+        "fire"
+      ],
+      "typesZhHans": [
+        "火"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 81,
+      "nationalDex": 515,
+      "slug": "panpour",
+      "names": {
+        "zh-Hant": "冷水猴",
+        "en": "Panpour",
+        "ja": "ヒヤップ",
+        "zh-Hans": "冷水猴"
+      },
+      "types": [
+        "water"
+      ],
+      "typesZhHans": [
+        "水"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 82,
+      "nationalDex": 516,
+      "slug": "simipour",
+      "names": {
+        "zh-Hant": "冷水猿",
+        "en": "Simipour",
+        "ja": "ヒヤッキー",
+        "zh-Hans": "冷水猿"
+      },
+      "types": [
+        "water"
+      ],
+      "typesZhHans": [
+        "水"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 83,
+      "nationalDex": 307,
+      "slug": "meditite",
+      "names": {
+        "zh-Hant": "瑪沙那",
+        "en": "Meditite",
+        "ja": "アサナン",
+        "zh-Hans": "玛沙那"
+      },
+      "types": [
+        "fighting",
+        "psychic"
+      ],
+      "typesZhHans": [
+        "格斗",
+        "超能力"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 84,
+      "nationalDex": 308,
+      "slug": "medicham",
+      "names": {
+        "zh-Hant": "恰雷姆",
+        "en": "Medicham",
+        "ja": "チャーレム",
+        "zh-Hans": "恰雷姆"
+      },
+      "types": [
+        "fighting",
+        "psychic"
+      ],
+      "typesZhHans": [
+        "格斗",
+        "超能力"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 85,
+      "nationalDex": 309,
+      "slug": "electrike",
+      "names": {
+        "zh-Hant": "落雷獸",
+        "en": "Electrike",
+        "ja": "ラクライ",
+        "zh-Hans": "落雷兽"
+      },
+      "types": [
+        "electric"
+      ],
+      "typesZhHans": [
+        "电"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 86,
+      "nationalDex": 310,
+      "slug": "manectric",
+      "names": {
+        "zh-Hant": "雷電獸",
+        "en": "Manectric",
+        "ja": "ライボルト",
+        "zh-Hans": "雷电兽"
+      },
+      "types": [
+        "electric"
+      ],
+      "typesZhHans": [
+        "电"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 87,
+      "nationalDex": 280,
+      "slug": "ralts",
+      "names": {
+        "zh-Hant": "拉魯拉絲",
+        "en": "Ralts",
+        "ja": "ラルトス",
+        "zh-Hans": "拉鲁拉丝"
+      },
+      "types": [
+        "psychic",
+        "fairy"
+      ],
+      "typesZhHans": [
+        "超能力",
+        "妖精"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 88,
+      "nationalDex": 281,
+      "slug": "kirlia",
+      "names": {
+        "zh-Hant": "奇魯莉安",
+        "en": "Kirlia",
+        "ja": "キルリア",
+        "zh-Hans": "奇鲁莉安"
+      },
+      "types": [
+        "psychic",
+        "fairy"
+      ],
+      "typesZhHans": [
+        "超能力",
+        "妖精"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 89,
+      "nationalDex": 282,
+      "slug": "gardevoir",
+      "names": {
+        "zh-Hant": "沙奈朵",
+        "en": "Gardevoir",
+        "ja": "サーナイト",
+        "zh-Hans": "沙奈朵"
+      },
+      "types": [
+        "psychic",
+        "fairy"
+      ],
+      "typesZhHans": [
+        "超能力",
+        "妖精"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 90,
+      "nationalDex": 475,
+      "slug": "gallade",
+      "names": {
+        "zh-Hant": "艾路雷朵",
+        "en": "Gallade",
+        "ja": "エルレイド",
+        "zh-Hans": "艾路雷朵"
+      },
+      "types": [
+        "psychic",
+        "fighting"
+      ],
+      "typesZhHans": [
+        "超能力",
+        "格斗"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 91,
+      "nationalDex": 228,
+      "slug": "houndour",
+      "names": {
+        "zh-Hant": "戴魯比",
+        "en": "Houndour",
+        "ja": "デルビル",
+        "zh-Hans": "戴鲁比"
+      },
+      "types": [
+        "dark",
+        "fire"
+      ],
+      "typesZhHans": [
+        "恶",
+        "火"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 92,
+      "nationalDex": 229,
+      "slug": "houndoom",
+      "names": {
+        "zh-Hant": "黑魯加",
+        "en": "Houndoom",
+        "ja": "ヘルガー",
+        "zh-Hans": "黑鲁加"
+      },
+      "types": [
+        "dark",
+        "fire"
+      ],
+      "typesZhHans": [
+        "恶",
+        "火"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 93,
+      "nationalDex": 333,
+      "slug": "swablu",
+      "names": {
+        "zh-Hant": "青綿鳥",
+        "en": "Swablu",
+        "ja": "チルット",
+        "zh-Hans": "青绵鸟"
+      },
+      "types": [
+        "normal",
+        "flying"
+      ],
+      "typesZhHans": [
+        "一般",
+        "飞行"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 94,
+      "nationalDex": 334,
+      "slug": "altaria",
+      "names": {
+        "zh-Hant": "七夕青鳥",
+        "en": "Altaria",
+        "ja": "チルタリス",
+        "zh-Hans": "七夕青鸟"
+      },
+      "types": [
+        "dragon",
+        "flying"
+      ],
+      "typesZhHans": [
+        "龙",
+        "飞行"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 95,
+      "nationalDex": 531,
+      "slug": "audino",
+      "names": {
+        "zh-Hant": "差不多娃娃",
+        "en": "Audino",
+        "ja": "タブンネ",
+        "zh-Hans": "差不多娃娃"
+      },
+      "types": [
+        "normal"
+      ],
+      "typesZhHans": [
+        "一般"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 96,
+      "nationalDex": 682,
+      "slug": "spritzee",
+      "names": {
+        "zh-Hant": "粉香香",
+        "en": "Spritzee",
+        "ja": "シュシュプ",
+        "zh-Hans": "粉香香"
+      },
+      "types": [
+        "fairy"
+      ],
+      "typesZhHans": [
+        "妖精"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 97,
+      "nationalDex": 683,
+      "slug": "aromatisse",
+      "names": {
+        "zh-Hant": "芳香精",
+        "en": "Aromatisse",
+        "ja": "フレフワン",
+        "zh-Hans": "芳香精"
+      },
+      "types": [
+        "fairy"
+      ],
+      "typesZhHans": [
+        "妖精"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 98,
+      "nationalDex": 684,
+      "slug": "swirlix",
+      "names": {
+        "zh-Hant": "綿綿泡芙",
+        "en": "Swirlix",
+        "ja": "ペロッパフ",
+        "zh-Hans": "绵绵泡芙"
+      },
+      "types": [
+        "fairy"
+      ],
+      "typesZhHans": [
+        "妖精"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 99,
+      "nationalDex": 685,
+      "slug": "slurpuff",
+      "names": {
+        "zh-Hant": "胖甜妮",
+        "en": "Slurpuff",
+        "ja": "ペロリーム",
+        "zh-Hans": "胖甜妮"
+      },
+      "types": [
+        "fairy"
+      ],
+      "typesZhHans": [
+        "妖精"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 100,
+      "nationalDex": 133,
+      "slug": "eevee",
+      "names": {
+        "zh-Hant": "伊布",
+        "en": "Eevee",
+        "ja": "イーブイ",
+        "zh-Hans": "伊布"
+      },
+      "types": [
+        "normal"
+      ],
+      "typesZhHans": [
+        "一般"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 101,
+      "nationalDex": 134,
+      "slug": "vaporeon",
+      "names": {
+        "zh-Hant": "水伊布",
+        "en": "Vaporeon",
+        "ja": "シャワーズ",
+        "zh-Hans": "水伊布"
+      },
+      "types": [
+        "water"
+      ],
+      "typesZhHans": [
+        "水"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 102,
+      "nationalDex": 135,
+      "slug": "jolteon",
+      "names": {
+        "zh-Hant": "雷伊布",
+        "en": "Jolteon",
+        "ja": "サンダース",
+        "zh-Hans": "雷伊布"
+      },
+      "types": [
+        "electric"
+      ],
+      "typesZhHans": [
+        "电"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 103,
+      "nationalDex": 136,
+      "slug": "flareon",
+      "names": {
+        "zh-Hant": "火伊布",
+        "en": "Flareon",
+        "ja": "ブースター",
+        "zh-Hans": "火伊布"
+      },
+      "types": [
+        "fire"
+      ],
+      "typesZhHans": [
+        "火"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 104,
+      "nationalDex": 196,
+      "slug": "espeon",
+      "names": {
+        "zh-Hant": "太陽伊布",
+        "en": "Espeon",
+        "ja": "エーフィ",
+        "zh-Hans": "太阳伊布"
+      },
+      "types": [
+        "psychic"
+      ],
+      "typesZhHans": [
+        "超能力"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 105,
+      "nationalDex": 197,
+      "slug": "umbreon",
+      "names": {
+        "zh-Hant": "月亮伊布",
+        "en": "Umbreon",
+        "ja": "ブラッキー",
+        "zh-Hans": "月亮伊布"
+      },
+      "types": [
+        "dark"
+      ],
+      "typesZhHans": [
+        "恶"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 106,
+      "nationalDex": 470,
+      "slug": "leafeon",
+      "names": {
+        "zh-Hant": "葉伊布",
+        "en": "Leafeon",
+        "ja": "リーフィア",
+        "zh-Hans": "叶伊布"
+      },
+      "types": [
+        "grass"
+      ],
+      "typesZhHans": [
+        "草"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 107,
+      "nationalDex": 471,
+      "slug": "glaceon",
+      "names": {
+        "zh-Hant": "冰伊布",
+        "en": "Glaceon",
+        "ja": "グレイシア",
+        "zh-Hans": "冰伊布"
+      },
+      "types": [
+        "ice"
+      ],
+      "typesZhHans": [
+        "冰"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 108,
+      "nationalDex": 700,
+      "slug": "sylveon",
+      "names": {
+        "zh-Hant": "仙子伊布",
+        "en": "Sylveon",
+        "ja": "ニンフィア",
+        "zh-Hans": "仙子伊布"
+      },
+      "types": [
+        "fairy"
+      ],
+      "typesZhHans": [
+        "妖精"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 109,
+      "nationalDex": 427,
+      "slug": "buneary",
+      "names": {
+        "zh-Hant": "捲捲耳",
+        "en": "Buneary",
+        "ja": "ミミロル",
+        "zh-Hans": "卷卷耳"
+      },
+      "types": [
+        "normal"
+      ],
+      "typesZhHans": [
+        "一般"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 110,
+      "nationalDex": 428,
+      "slug": "lopunny",
+      "names": {
+        "zh-Hant": "長耳兔",
+        "en": "Lopunny",
+        "ja": "ミミロップ",
+        "zh-Hans": "长耳兔"
+      },
+      "types": [
+        "normal"
+      ],
+      "typesZhHans": [
+        "一般"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 111,
+      "nationalDex": 353,
+      "slug": "shuppet",
+      "names": {
+        "zh-Hant": "怨影娃娃",
+        "en": "Shuppet",
+        "ja": "カゲボウズ",
+        "zh-Hans": "怨影娃娃"
+      },
+      "types": [
+        "ghost"
+      ],
+      "typesZhHans": [
+        "幽灵"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 112,
+      "nationalDex": 354,
+      "slug": "banette",
+      "names": {
+        "zh-Hant": "詛咒娃娃",
+        "en": "Banette",
+        "ja": "ジュペッタ",
+        "zh-Hans": "诅咒娃娃"
+      },
+      "types": [
+        "ghost"
+      ],
+      "typesZhHans": [
+        "幽灵"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 113,
+      "nationalDex": 582,
+      "slug": "vanillite",
+      "names": {
+        "zh-Hant": "迷你冰",
+        "en": "Vanillite",
+        "ja": "バニプッチ",
+        "zh-Hans": "迷你冰"
+      },
+      "types": [
+        "ice"
+      ],
+      "typesZhHans": [
+        "冰"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 114,
+      "nationalDex": 583,
+      "slug": "vanillish",
+      "names": {
+        "zh-Hant": "多多冰",
+        "en": "Vanillish",
+        "ja": "バニリッチ",
+        "zh-Hans": "多多冰"
+      },
+      "types": [
+        "ice"
+      ],
+      "typesZhHans": [
+        "冰"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 115,
+      "nationalDex": 584,
+      "slug": "vanilluxe",
+      "names": {
+        "zh-Hant": "雙倍多多冰",
+        "en": "Vanilluxe",
+        "ja": "バイバニラ",
+        "zh-Hans": "双倍多多冰"
+      },
+      "types": [
+        "ice"
+      ],
+      "typesZhHans": [
+        "冰"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 116,
+      "nationalDex": 322,
+      "slug": "numel",
+      "names": {
+        "zh-Hant": "呆火駝",
+        "en": "Numel",
+        "ja": "ドンメル",
+        "zh-Hans": "呆火驼"
+      },
+      "types": [
+        "fire",
+        "ground"
+      ],
+      "typesZhHans": [
+        "火",
+        "地面"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 117,
+      "nationalDex": 323,
+      "slug": "camerupt",
+      "names": {
+        "zh-Hant": "噴火駝",
+        "en": "Camerupt",
+        "ja": "バクーダ",
+        "zh-Hans": "喷火驼"
+      },
+      "types": [
+        "fire",
+        "ground"
+      ],
+      "typesZhHans": [
+        "火",
+        "地面"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 118,
+      "nationalDex": 449,
+      "slug": "hippopotas",
+      "names": {
+        "zh-Hant": "沙河馬",
+        "en": "Hippopotas",
+        "ja": "ヒポポタス",
+        "zh-Hans": "沙河马"
+      },
+      "types": [
+        "ground"
+      ],
+      "typesZhHans": [
+        "地面"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 119,
+      "nationalDex": 450,
+      "slug": "hippowdon",
+      "names": {
+        "zh-Hant": "河馬獸",
+        "en": "Hippowdon",
+        "ja": "カバルドン",
+        "zh-Hans": "河马兽"
+      },
+      "types": [
+        "ground"
+      ],
+      "typesZhHans": [
+        "地面"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 120,
+      "nationalDex": 529,
+      "slug": "drilbur",
+      "names": {
+        "zh-Hant": "螺釘地鼠",
+        "en": "Drilbur",
+        "ja": "モグリュー",
+        "zh-Hans": "螺钉地鼠"
+      },
+      "types": [
+        "ground"
+      ],
+      "typesZhHans": [
+        "地面"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 121,
+      "nationalDex": 530,
+      "slug": "excadrill",
+      "names": {
+        "zh-Hant": "龍頭地鼠",
+        "en": "Excadrill",
+        "ja": "ドリュウズ",
+        "zh-Hans": "龙头地鼠"
+      },
+      "types": [
+        "ground",
+        "steel"
+      ],
+      "typesZhHans": [
+        "地面",
+        "钢"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 122,
+      "nationalDex": 551,
+      "slug": "sandile",
+      "names": {
+        "zh-Hant": "黑眼鱷",
+        "en": "Sandile",
+        "ja": "メグロコ",
+        "zh-Hans": "黑眼鳄"
+      },
+      "types": [
+        "ground",
+        "dark"
+      ],
+      "typesZhHans": [
+        "地面",
+        "恶"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 123,
+      "nationalDex": 552,
+      "slug": "krokorok",
+      "names": {
+        "zh-Hant": "混混鱷",
+        "en": "Krokorok",
+        "ja": "ワルビル",
+        "zh-Hans": "混混鳄"
+      },
+      "types": [
+        "ground",
+        "dark"
+      ],
+      "typesZhHans": [
+        "地面",
+        "恶"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 124,
+      "nationalDex": 553,
+      "slug": "krookodile",
+      "names": {
+        "zh-Hant": "流氓鱷",
+        "en": "Krookodile",
+        "ja": "ワルビアル",
+        "zh-Hans": "流氓鳄"
+      },
+      "types": [
+        "ground",
+        "dark"
+      ],
+      "typesZhHans": [
+        "地面",
+        "恶"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 125,
+      "nationalDex": 66,
+      "slug": "machop",
+      "names": {
+        "zh-Hant": "腕力",
+        "en": "Machop",
+        "ja": "ワンリキー",
+        "zh-Hans": "腕力"
+      },
+      "types": [
+        "fighting"
+      ],
+      "typesZhHans": [
+        "格斗"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 126,
+      "nationalDex": 67,
+      "slug": "machoke",
+      "names": {
+        "zh-Hant": "豪力",
+        "en": "Machoke",
+        "ja": "ゴーリキー",
+        "zh-Hans": "豪力"
+      },
+      "types": [
+        "fighting"
+      ],
+      "typesZhHans": [
+        "格斗"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 127,
+      "nationalDex": 68,
+      "slug": "machamp",
+      "names": {
+        "zh-Hant": "怪力",
+        "en": "Machamp",
+        "ja": "カイリキー",
+        "zh-Hans": "怪力"
+      },
+      "types": [
+        "fighting"
+      ],
+      "typesZhHans": [
+        "格斗"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 128,
+      "nationalDex": 443,
+      "slug": "gible",
+      "names": {
+        "zh-Hant": "圓陸鯊",
+        "en": "Gible",
+        "ja": "フカマル",
+        "zh-Hans": "圆陆鲨"
+      },
+      "types": [
+        "dragon",
+        "ground"
+      ],
+      "typesZhHans": [
+        "龙",
+        "地面"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 129,
+      "nationalDex": 444,
+      "slug": "gabite",
+      "names": {
+        "zh-Hant": "尖牙陸鯊",
+        "en": "Gabite",
+        "ja": "ガバイト",
+        "zh-Hans": "尖牙陆鲨"
+      },
+      "types": [
+        "dragon",
+        "ground"
+      ],
+      "typesZhHans": [
+        "龙",
+        "地面"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 130,
+      "nationalDex": 445,
+      "slug": "garchomp",
+      "names": {
+        "zh-Hant": "烈咬陸鯊",
+        "en": "Garchomp",
+        "ja": "ガブリアス",
+        "zh-Hans": "烈咬陆鲨"
+      },
+      "types": [
+        "dragon",
+        "ground"
+      ],
+      "typesZhHans": [
+        "龙",
+        "地面"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 131,
+      "nationalDex": 703,
+      "slug": "carbink",
+      "names": {
+        "zh-Hant": "小碎鑽",
+        "en": "Carbink",
+        "ja": "メレシー",
+        "zh-Hans": "小碎钻"
+      },
+      "types": [
+        "rock",
+        "fairy"
+      ],
+      "typesZhHans": [
+        "岩石",
+        "妖精"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 132,
+      "nationalDex": 302,
+      "slug": "sableye",
+      "names": {
+        "zh-Hant": "勾魂眼",
+        "en": "Sableye",
+        "ja": "ヤミラミ",
+        "zh-Hans": "勾魂眼"
+      },
+      "types": [
+        "dark",
+        "ghost"
+      ],
+      "typesZhHans": [
+        "恶",
+        "幽灵"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 133,
+      "nationalDex": 303,
+      "slug": "mawile",
+      "names": {
+        "zh-Hant": "大嘴娃",
+        "en": "Mawile",
+        "ja": "クチート",
+        "zh-Hans": "大嘴娃"
+      },
+      "types": [
+        "steel",
+        "fairy"
+      ],
+      "typesZhHans": [
+        "钢",
+        "妖精"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 134,
+      "nationalDex": 359,
+      "slug": "absol",
+      "names": {
+        "zh-Hant": "阿勃梭魯",
+        "en": "Absol",
+        "ja": "アブソル",
+        "zh-Hans": "阿勃梭鲁"
+      },
+      "types": [
+        "dark"
+      ],
+      "typesZhHans": [
+        "恶"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 135,
+      "nationalDex": 447,
+      "slug": "riolu",
+      "names": {
+        "zh-Hant": "利歐路",
+        "en": "Riolu",
+        "ja": "リオル",
+        "zh-Hans": "利欧路"
+      },
+      "types": [
+        "fighting"
+      ],
+      "typesZhHans": [
+        "格斗"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 136,
+      "nationalDex": 448,
+      "slug": "lucario",
+      "names": {
+        "zh-Hant": "路卡利歐",
+        "en": "Lucario",
+        "ja": "ルカリオ",
+        "zh-Hans": "路卡利欧"
+      },
+      "types": [
+        "fighting",
+        "steel"
+      ],
+      "typesZhHans": [
+        "格斗",
+        "钢"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 137,
+      "nationalDex": 79,
+      "slug": "slowpoke",
+      "names": {
+        "zh-Hant": "呆呆獸",
+        "en": "Slowpoke",
+        "ja": "ヤドン",
+        "zh-Hans": "呆呆兽"
+      },
+      "types": [
+        "water",
+        "psychic"
+      ],
+      "typesZhHans": [
+        "水",
+        "超能力"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 138,
+      "nationalDex": 80,
+      "slug": "slowbro",
+      "names": {
+        "zh-Hant": "呆殼獸",
+        "en": "Slowbro",
+        "ja": "ヤドラン",
+        "zh-Hans": "呆壳兽"
+      },
+      "types": [
+        "water",
+        "psychic"
+      ],
+      "typesZhHans": [
+        "水",
+        "超能力"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 139,
+      "nationalDex": 199,
+      "slug": "slowking",
+      "names": {
+        "zh-Hant": "呆呆王",
+        "en": "Slowking",
+        "ja": "ヤドキング",
+        "zh-Hans": "呆呆王"
+      },
+      "types": [
+        "water",
+        "psychic"
+      ],
+      "typesZhHans": [
+        "水",
+        "超能力"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 140,
+      "nationalDex": 318,
+      "slug": "carvanha",
+      "names": {
+        "zh-Hant": "利牙魚",
+        "en": "Carvanha",
+        "ja": "キバニア",
+        "zh-Hans": "利牙鱼"
+      },
+      "types": [
+        "water",
+        "dark"
+      ],
+      "typesZhHans": [
+        "水",
+        "恶"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 141,
+      "nationalDex": 319,
+      "slug": "sharpedo",
+      "names": {
+        "zh-Hant": "巨牙鯊",
+        "en": "Sharpedo",
+        "ja": "サメハダー",
+        "zh-Hans": "巨牙鲨"
+      },
+      "types": [
+        "water",
+        "dark"
+      ],
+      "typesZhHans": [
+        "水",
+        "恶"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 142,
+      "nationalDex": 602,
+      "slug": "tynamo",
+      "names": {
+        "zh-Hant": "麻麻小魚",
+        "en": "Tynamo",
+        "ja": "シビシラス",
+        "zh-Hans": "麻麻小鱼"
+      },
+      "types": [
+        "electric"
+      ],
+      "typesZhHans": [
+        "电"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 143,
+      "nationalDex": 603,
+      "slug": "eelektrik",
+      "names": {
+        "zh-Hant": "麻麻鰻",
+        "en": "Eelektrik",
+        "ja": "シビビール",
+        "zh-Hans": "麻麻鳗"
+      },
+      "types": [
+        "electric"
+      ],
+      "typesZhHans": [
+        "电"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 144,
+      "nationalDex": 604,
+      "slug": "eelektross",
+      "names": {
+        "zh-Hant": "麻麻鰻魚王",
+        "en": "Eelektross",
+        "ja": "シビルドン",
+        "zh-Hans": "麻麻鳗鱼王"
+      },
+      "types": [
+        "electric"
+      ],
+      "typesZhHans": [
+        "电"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 145,
+      "nationalDex": 147,
+      "slug": "dratini",
+      "names": {
+        "zh-Hant": "迷你龍",
+        "en": "Dratini",
+        "ja": "ミニリュウ",
+        "zh-Hans": "迷你龙"
+      },
+      "types": [
+        "dragon"
+      ],
+      "typesZhHans": [
+        "龙"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 146,
+      "nationalDex": 148,
+      "slug": "dragonair",
+      "names": {
+        "zh-Hant": "哈克龍",
+        "en": "Dragonair",
+        "ja": "ハクリュー",
+        "zh-Hans": "哈克龙"
+      },
+      "types": [
+        "dragon"
+      ],
+      "typesZhHans": [
+        "龙"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 147,
+      "nationalDex": 149,
+      "slug": "dragonite",
+      "names": {
+        "zh-Hant": "快龍",
+        "en": "Dragonite",
+        "ja": "カイリュー",
+        "zh-Hans": "快龙"
+      },
+      "types": [
+        "dragon",
+        "flying"
+      ],
+      "typesZhHans": [
+        "龙",
+        "飞行"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 148,
+      "nationalDex": 1,
+      "slug": "bulbasaur",
+      "names": {
+        "zh-Hant": "妙蛙種子",
+        "en": "Bulbasaur",
+        "ja": "フシギダネ",
+        "zh-Hans": "妙蛙种子"
+      },
+      "types": [
+        "grass",
+        "poison"
+      ],
+      "typesZhHans": [
+        "草",
+        "毒"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 149,
+      "nationalDex": 2,
+      "slug": "ivysaur",
+      "names": {
+        "zh-Hant": "妙蛙草",
+        "en": "Ivysaur",
+        "ja": "フシギソウ",
+        "zh-Hans": "妙蛙草"
+      },
+      "types": [
+        "grass",
+        "poison"
+      ],
+      "typesZhHans": [
+        "草",
+        "毒"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 150,
+      "nationalDex": 3,
+      "slug": "venusaur",
+      "names": {
+        "zh-Hant": "妙蛙花",
+        "en": "Venusaur",
+        "ja": "フシギバナ",
+        "zh-Hans": "妙蛙花"
+      },
+      "types": [
+        "grass",
+        "poison"
+      ],
+      "typesZhHans": [
+        "草",
+        "毒"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 151,
+      "nationalDex": 4,
+      "slug": "charmander",
+      "names": {
+        "zh-Hant": "小火龍",
+        "en": "Charmander",
+        "ja": "ヒトカゲ",
+        "zh-Hans": "小火龙"
+      },
+      "types": [
+        "fire"
+      ],
+      "typesZhHans": [
+        "火"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 152,
+      "nationalDex": 5,
+      "slug": "charmeleon",
+      "names": {
+        "zh-Hant": "火恐龍",
+        "en": "Charmeleon",
+        "ja": "リザード",
+        "zh-Hans": "火恐龙"
+      },
+      "types": [
+        "fire"
+      ],
+      "typesZhHans": [
+        "火"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 153,
+      "nationalDex": 6,
+      "slug": "charizard",
+      "names": {
+        "zh-Hant": "噴火龍",
+        "en": "Charizard",
+        "ja": "リザードン",
+        "zh-Hans": "喷火龙"
+      },
+      "types": [
+        "fire",
+        "flying"
+      ],
+      "typesZhHans": [
+        "火",
+        "飞行"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 154,
+      "nationalDex": 7,
+      "slug": "squirtle",
+      "names": {
+        "zh-Hant": "傑尼龜",
+        "en": "Squirtle",
+        "ja": "ゼニガメ",
+        "zh-Hans": "杰尼龟"
+      },
+      "types": [
+        "water"
+      ],
+      "typesZhHans": [
+        "水"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 155,
+      "nationalDex": 8,
+      "slug": "wartortle",
+      "names": {
+        "zh-Hant": "卡咪龜",
+        "en": "Wartortle",
+        "ja": "カメール",
+        "zh-Hans": "卡咪龟"
+      },
+      "types": [
+        "water"
+      ],
+      "typesZhHans": [
+        "水"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 156,
+      "nationalDex": 9,
+      "slug": "blastoise",
+      "names": {
+        "zh-Hant": "水箭龜",
+        "en": "Blastoise",
+        "ja": "カメックス",
+        "zh-Hans": "水箭龟"
+      },
+      "types": [
+        "water"
+      ],
+      "typesZhHans": [
+        "水"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 157,
+      "nationalDex": 618,
+      "slug": "stunfisk",
+      "names": {
+        "zh-Hant": "泥巴魚",
+        "en": "Stunfisk",
+        "ja": "マッギョ",
+        "zh-Hans": "泥巴鱼"
+      },
+      "types": [
+        "ground",
+        "electric"
+      ],
+      "typesZhHans": [
+        "地面",
+        "电"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 158,
+      "nationalDex": 676,
+      "slug": "furfrou",
+      "names": {
+        "zh-Hant": "多麗米亞",
+        "en": "Furfrou",
+        "ja": "トリミアン",
+        "zh-Hans": "多丽米亚"
+      },
+      "types": [
+        "normal"
+      ],
+      "typesZhHans": [
+        "一般"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 159,
+      "nationalDex": 686,
+      "slug": "inkay",
+      "names": {
+        "zh-Hant": "好啦魷",
+        "en": "Inkay",
+        "ja": "マーイーカ",
+        "zh-Hans": "好啦鱿"
+      },
+      "types": [
+        "dark",
+        "psychic"
+      ],
+      "typesZhHans": [
+        "恶",
+        "超能力"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 160,
+      "nationalDex": 687,
+      "slug": "malamar",
+      "names": {
+        "zh-Hant": "烏賊王",
+        "en": "Malamar",
+        "ja": "カラマネロ",
+        "zh-Hans": "乌贼王"
+      },
+      "types": [
+        "dark",
+        "psychic"
+      ],
+      "typesZhHans": [
+        "恶",
+        "超能力"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 161,
+      "nationalDex": 690,
+      "slug": "skrelp",
+      "names": {
+        "zh-Hant": "垃垃藻",
+        "en": "Skrelp",
+        "ja": "クズモー",
+        "zh-Hans": "垃垃藻"
+      },
+      "types": [
+        "poison",
+        "water"
+      ],
+      "typesZhHans": [
+        "毒",
+        "水"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 162,
+      "nationalDex": 691,
+      "slug": "dragalge",
+      "names": {
+        "zh-Hant": "毒藻龍",
+        "en": "Dragalge",
+        "ja": "ドラミドロ",
+        "zh-Hans": "毒藻龙"
+      },
+      "types": [
+        "poison",
+        "dragon"
+      ],
+      "typesZhHans": [
+        "毒",
+        "龙"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 163,
+      "nationalDex": 692,
+      "slug": "clauncher",
+      "names": {
+        "zh-Hant": "鐵臂槍蝦",
+        "en": "Clauncher",
+        "ja": "ウデッポウ",
+        "zh-Hans": "铁臂枪虾"
+      },
+      "types": [
+        "water"
+      ],
+      "typesZhHans": [
+        "水"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 164,
+      "nationalDex": 693,
+      "slug": "clawitzer",
+      "names": {
+        "zh-Hant": "鋼炮臂蝦",
+        "en": "Clawitzer",
+        "ja": "ブロスター",
+        "zh-Hans": "钢炮臂虾"
+      },
+      "types": [
+        "water"
+      ],
+      "typesZhHans": [
+        "水"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 165,
+      "nationalDex": 704,
+      "slug": "goomy",
+      "names": {
+        "zh-Hant": "黏黏寶",
+        "en": "Goomy",
+        "ja": "ヌメラ",
+        "zh-Hans": "黏黏宝"
+      },
+      "types": [
+        "dragon"
+      ],
+      "typesZhHans": [
+        "龙"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 166,
+      "nationalDex": 705,
+      "slug": "sliggoo",
+      "names": {
+        "zh-Hant": "黏美兒",
+        "en": "Sliggoo",
+        "ja": "ヌメイル",
+        "zh-Hans": "黏美儿"
+      },
+      "types": [
+        "dragon"
+      ],
+      "typesZhHans": [
+        "龙"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 167,
+      "nationalDex": 706,
+      "slug": "goodra",
+      "names": {
+        "zh-Hant": "黏美龍",
+        "en": "Goodra",
+        "ja": "ヌメルゴン",
+        "zh-Hans": "黏美龙"
+      },
+      "types": [
+        "dragon"
+      ],
+      "typesZhHans": [
+        "龙"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 168,
+      "nationalDex": 225,
+      "slug": "delibird",
+      "names": {
+        "zh-Hant": "信使鳥",
+        "en": "Delibird",
+        "ja": "デリバード",
+        "zh-Hans": "信使鸟"
+      },
+      "types": [
+        "ice",
+        "flying"
+      ],
+      "typesZhHans": [
+        "冰",
+        "飞行"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 169,
+      "nationalDex": 361,
+      "slug": "snorunt",
+      "names": {
+        "zh-Hant": "雪童子",
+        "en": "Snorunt",
+        "ja": "ユキワラシ",
+        "zh-Hans": "雪童子"
+      },
+      "types": [
+        "ice"
+      ],
+      "typesZhHans": [
+        "冰"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 170,
+      "nationalDex": 362,
+      "slug": "glalie",
+      "names": {
+        "zh-Hant": "冰鬼護",
+        "en": "Glalie",
+        "ja": "オニゴーリ",
+        "zh-Hans": "冰鬼护"
+      },
+      "types": [
+        "ice"
+      ],
+      "typesZhHans": [
+        "冰"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 171,
+      "nationalDex": 478,
+      "slug": "froslass",
+      "names": {
+        "zh-Hant": "雪妖女",
+        "en": "Froslass",
+        "ja": "ユキメノコ",
+        "zh-Hans": "雪妖女"
+      },
+      "types": [
+        "ice",
+        "ghost"
+      ],
+      "typesZhHans": [
+        "冰",
+        "幽灵"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 172,
+      "nationalDex": 459,
+      "slug": "snover",
+      "names": {
+        "zh-Hant": "雪笠怪",
+        "en": "Snover",
+        "ja": "ユキカブリ",
+        "zh-Hans": "雪笠怪"
+      },
+      "types": [
+        "grass",
+        "ice"
+      ],
+      "typesZhHans": [
+        "草",
+        "冰"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 173,
+      "nationalDex": 460,
+      "slug": "abomasnow",
+      "names": {
+        "zh-Hant": "暴雪王",
+        "en": "Abomasnow",
+        "ja": "ユキノオー",
+        "zh-Hans": "暴雪王"
+      },
+      "types": [
+        "grass",
+        "ice"
+      ],
+      "typesZhHans": [
+        "草",
+        "冰"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 174,
+      "nationalDex": 712,
+      "slug": "bergmite",
+      "names": {
+        "zh-Hant": "冰寶",
+        "en": "Bergmite",
+        "ja": "カチコール",
+        "zh-Hans": "冰宝"
+      },
+      "types": [
+        "ice"
+      ],
+      "typesZhHans": [
+        "冰"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 175,
+      "nationalDex": 713,
+      "slug": "avalugg",
+      "names": {
+        "zh-Hant": "冰岩怪",
+        "en": "Avalugg",
+        "ja": "クレベース",
+        "zh-Hans": "冰岩怪"
+      },
+      "types": [
+        "ice"
+      ],
+      "typesZhHans": [
+        "冰"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 176,
+      "nationalDex": 123,
+      "slug": "scyther",
+      "names": {
+        "zh-Hant": "飛天螳螂",
+        "en": "Scyther",
+        "ja": "ストライク",
+        "zh-Hans": "飞天螳螂"
+      },
+      "types": [
+        "bug",
+        "flying"
+      ],
+      "typesZhHans": [
+        "虫",
+        "飞行"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 177,
+      "nationalDex": 212,
+      "slug": "scizor",
+      "names": {
+        "zh-Hant": "巨鉗螳螂",
+        "en": "Scizor",
+        "ja": "ハッサム",
+        "zh-Hans": "巨钳螳螂"
+      },
+      "types": [
+        "bug",
+        "steel"
+      ],
+      "typesZhHans": [
+        "虫",
+        "钢"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 178,
+      "nationalDex": 127,
+      "slug": "pinsir",
+      "names": {
+        "zh-Hant": "凱羅斯",
+        "en": "Pinsir",
+        "ja": "カイロス",
+        "zh-Hans": "凯罗斯"
+      },
+      "types": [
+        "bug"
+      ],
+      "typesZhHans": [
+        "虫"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 179,
+      "nationalDex": 214,
+      "slug": "heracross",
+      "names": {
+        "zh-Hant": "赫拉克羅斯",
+        "en": "Heracross",
+        "ja": "ヘラクロス",
+        "zh-Hans": "赫拉克罗斯"
+      },
+      "types": [
+        "bug",
+        "fighting"
+      ],
+      "typesZhHans": [
+        "虫",
+        "格斗"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 180,
+      "nationalDex": 587,
+      "slug": "emolga",
+      "names": {
+        "zh-Hant": "電飛鼠",
+        "en": "Emolga",
+        "ja": "エモンガ",
+        "zh-Hans": "电飞鼠"
+      },
+      "types": [
+        "electric",
+        "flying"
+      ],
+      "typesZhHans": [
+        "电",
+        "飞行"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 181,
+      "nationalDex": 701,
+      "slug": "hawlucha",
+      "names": {
+        "zh-Hant": "摔角鷹人",
+        "en": "Hawlucha",
+        "ja": "ルチャブル",
+        "zh-Hans": "摔角鹰人"
+      },
+      "types": [
+        "fighting",
+        "flying"
+      ],
+      "typesZhHans": [
+        "格斗",
+        "飞行"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 182,
+      "nationalDex": 708,
+      "slug": "phantump",
+      "names": {
+        "zh-Hant": "小木靈",
+        "en": "Phantump",
+        "ja": "ボクレー",
+        "zh-Hans": "小木灵"
+      },
+      "types": [
+        "ghost",
+        "grass"
+      ],
+      "typesZhHans": [
+        "幽灵",
+        "草"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 183,
+      "nationalDex": 709,
+      "slug": "trevenant",
+      "names": {
+        "zh-Hant": "朽木妖",
+        "en": "Trevenant",
+        "ja": "オーロット",
+        "zh-Hans": "朽木妖"
+      },
+      "types": [
+        "ghost",
+        "grass"
+      ],
+      "typesZhHans": [
+        "幽灵",
+        "草"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 184,
+      "nationalDex": 559,
+      "slug": "scraggy",
+      "names": {
+        "zh-Hant": "滑滑小子",
+        "en": "Scraggy",
+        "ja": "ズルッグ",
+        "zh-Hans": "滑滑小子"
+      },
+      "types": [
+        "dark",
+        "fighting"
+      ],
+      "typesZhHans": [
+        "恶",
+        "格斗"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 185,
+      "nationalDex": 560,
+      "slug": "scrafty",
+      "names": {
+        "zh-Hant": "頭巾混混",
+        "en": "Scrafty",
+        "ja": "ズルズキン",
+        "zh-Hans": "头巾混混"
+      },
+      "types": [
+        "dark",
+        "fighting"
+      ],
+      "typesZhHans": [
+        "恶",
+        "格斗"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 186,
+      "nationalDex": 714,
+      "slug": "noibat",
+      "names": {
+        "zh-Hant": "嗡蝠",
+        "en": "Noibat",
+        "ja": "オンバット",
+        "zh-Hans": "嗡蝠"
+      },
+      "types": [
+        "flying",
+        "dragon"
+      ],
+      "typesZhHans": [
+        "飞行",
+        "龙"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 187,
+      "nationalDex": 715,
+      "slug": "noivern",
+      "names": {
+        "zh-Hant": "音波龍",
+        "en": "Noivern",
+        "ja": "オンバーン",
+        "zh-Hans": "音波龙"
+      },
+      "types": [
+        "flying",
+        "dragon"
+      ],
+      "typesZhHans": [
+        "飞行",
+        "龙"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 188,
+      "nationalDex": 707,
+      "slug": "klefki",
+      "names": {
+        "zh-Hant": "鑰圈兒",
+        "en": "Klefki",
+        "ja": "クレッフィ",
+        "zh-Hans": "钥圈儿"
+      },
+      "types": [
+        "steel",
+        "fairy"
+      ],
+      "typesZhHans": [
+        "钢",
+        "妖精"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 189,
+      "nationalDex": 607,
+      "slug": "litwick",
+      "names": {
+        "zh-Hant": "燭光靈",
+        "en": "Litwick",
+        "ja": "ヒトモシ",
+        "zh-Hans": "烛光灵"
+      },
+      "types": [
+        "ghost",
+        "fire"
+      ],
+      "typesZhHans": [
+        "幽灵",
+        "火"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 190,
+      "nationalDex": 608,
+      "slug": "lampent",
+      "names": {
+        "zh-Hant": "燈火幽靈",
+        "en": "Lampent",
+        "ja": "ランプラー",
+        "zh-Hans": "灯火幽灵"
+      },
+      "types": [
+        "ghost",
+        "fire"
+      ],
+      "typesZhHans": [
+        "幽灵",
+        "火"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 191,
+      "nationalDex": 609,
+      "slug": "chandelure",
+      "names": {
+        "zh-Hant": "水晶燈火靈",
+        "en": "Chandelure",
+        "ja": "シャンデラ",
+        "zh-Hans": "水晶灯火灵"
+      },
+      "types": [
+        "ghost",
+        "fire"
+      ],
+      "typesZhHans": [
+        "幽灵",
+        "火"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 192,
+      "nationalDex": 142,
+      "slug": "aerodactyl",
+      "names": {
+        "zh-Hant": "化石翼龍",
+        "en": "Aerodactyl",
+        "ja": "プテラ",
+        "zh-Hans": "化石翼龙"
+      },
+      "types": [
+        "rock",
+        "flying"
+      ],
+      "typesZhHans": [
+        "岩石",
+        "飞行"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 193,
+      "nationalDex": 696,
+      "slug": "tyrunt",
+      "names": {
+        "zh-Hant": "寶寶暴龍",
+        "en": "Tyrunt",
+        "ja": "チゴラス",
+        "zh-Hans": "宝宝暴龙"
+      },
+      "types": [
+        "rock",
+        "dragon"
+      ],
+      "typesZhHans": [
+        "岩石",
+        "龙"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 194,
+      "nationalDex": 697,
+      "slug": "tyrantrum",
+      "names": {
+        "zh-Hant": "怪顎龍",
+        "en": "Tyrantrum",
+        "ja": "ガチゴラス",
+        "zh-Hans": "怪颚龙"
+      },
+      "types": [
+        "rock",
+        "dragon"
+      ],
+      "typesZhHans": [
+        "岩石",
+        "龙"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 195,
+      "nationalDex": 698,
+      "slug": "amaura",
+      "names": {
+        "zh-Hant": "冰雪龍",
+        "en": "Amaura",
+        "ja": "アマルス",
+        "zh-Hans": "冰雪龙"
+      },
+      "types": [
+        "rock",
+        "ice"
+      ],
+      "typesZhHans": [
+        "岩石",
+        "冰"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 196,
+      "nationalDex": 699,
+      "slug": "aurorus",
+      "names": {
+        "zh-Hant": "冰雪巨龍",
+        "en": "Aurorus",
+        "ja": "アマルルガ",
+        "zh-Hans": "冰雪巨龙"
+      },
+      "types": [
+        "rock",
+        "ice"
+      ],
+      "typesZhHans": [
+        "岩石",
+        "冰"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 197,
+      "nationalDex": 95,
+      "slug": "onix",
+      "names": {
+        "zh-Hant": "大岩蛇",
+        "en": "Onix",
+        "ja": "イワーク",
+        "zh-Hans": "大岩蛇"
+      },
+      "types": [
+        "rock",
+        "ground"
+      ],
+      "typesZhHans": [
+        "岩石",
+        "地面"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 198,
+      "nationalDex": 208,
+      "slug": "steelix",
+      "names": {
+        "zh-Hant": "大鋼蛇",
+        "en": "Steelix",
+        "ja": "ハガネール",
+        "zh-Hans": "大钢蛇"
+      },
+      "types": [
+        "steel",
+        "ground"
+      ],
+      "typesZhHans": [
+        "钢",
+        "地面"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 199,
+      "nationalDex": 304,
+      "slug": "aron",
+      "names": {
+        "zh-Hant": "可可多拉",
+        "en": "Aron",
+        "ja": "ココドラ",
+        "zh-Hans": "可可多拉"
+      },
+      "types": [
+        "steel",
+        "rock"
+      ],
+      "typesZhHans": [
+        "钢",
+        "岩石"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 200,
+      "nationalDex": 305,
+      "slug": "lairon",
+      "names": {
+        "zh-Hant": "可多拉",
+        "en": "Lairon",
+        "ja": "コドラ",
+        "zh-Hans": "可多拉"
+      },
+      "types": [
+        "steel",
+        "rock"
+      ],
+      "typesZhHans": [
+        "钢",
+        "岩石"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 201,
+      "nationalDex": 306,
+      "slug": "aggron",
+      "names": {
+        "zh-Hant": "波士可多拉",
+        "en": "Aggron",
+        "ja": "ボスゴドラ",
+        "zh-Hans": "波士可多拉"
+      },
+      "types": [
+        "steel",
+        "rock"
+      ],
+      "typesZhHans": [
+        "钢",
+        "岩石"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 202,
+      "nationalDex": 694,
+      "slug": "helioptile",
+      "names": {
+        "zh-Hant": "傘電蜥",
+        "en": "Helioptile",
+        "ja": "エリキテル",
+        "zh-Hans": "伞电蜥"
+      },
+      "types": [
+        "electric",
+        "normal"
+      ],
+      "typesZhHans": [
+        "电",
+        "一般"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 203,
+      "nationalDex": 695,
+      "slug": "heliolisk",
+      "names": {
+        "zh-Hant": "光電傘蜥",
+        "en": "Heliolisk",
+        "ja": "エレザード",
+        "zh-Hans": "光电伞蜥"
+      },
+      "types": [
+        "electric",
+        "normal"
+      ],
+      "typesZhHans": [
+        "电",
+        "一般"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 204,
+      "nationalDex": 710,
+      "slug": "pumpkaboo",
+      "names": {
+        "zh-Hant": "南瓜精",
+        "en": "Pumpkaboo",
+        "ja": "バケッチャ",
+        "zh-Hans": "南瓜精"
+      },
+      "types": [
+        "ghost",
+        "grass"
+      ],
+      "typesZhHans": [
+        "幽灵",
+        "草"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 205,
+      "nationalDex": 711,
+      "slug": "gourgeist",
+      "names": {
+        "zh-Hant": "南瓜怪人",
+        "en": "Gourgeist",
+        "ja": "パンプジン",
+        "zh-Hans": "南瓜怪人"
+      },
+      "types": [
+        "ghost",
+        "grass"
+      ],
+      "typesZhHans": [
+        "幽灵",
+        "草"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 206,
+      "nationalDex": 246,
+      "slug": "larvitar",
+      "names": {
+        "zh-Hant": "幼基拉斯",
+        "en": "Larvitar",
+        "ja": "ヨーギラス",
+        "zh-Hans": "幼基拉斯"
+      },
+      "types": [
+        "rock",
+        "ground"
+      ],
+      "typesZhHans": [
+        "岩石",
+        "地面"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 207,
+      "nationalDex": 247,
+      "slug": "pupitar",
+      "names": {
+        "zh-Hant": "沙基拉斯",
+        "en": "Pupitar",
+        "ja": "サナギラス",
+        "zh-Hans": "沙基拉斯"
+      },
+      "types": [
+        "rock",
+        "ground"
+      ],
+      "typesZhHans": [
+        "岩石",
+        "地面"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 208,
+      "nationalDex": 248,
+      "slug": "tyranitar",
+      "names": {
+        "zh-Hant": "班基拉斯",
+        "en": "Tyranitar",
+        "ja": "バンギラス",
+        "zh-Hans": "班基拉斯"
+      },
+      "types": [
+        "rock",
+        "dark"
+      ],
+      "typesZhHans": [
+        "岩石",
+        "恶"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 209,
+      "nationalDex": 656,
+      "slug": "froakie",
+      "names": {
+        "zh-Hant": "呱呱泡蛙",
+        "en": "Froakie",
+        "ja": "ケロマツ",
+        "zh-Hans": "呱呱泡蛙"
+      },
+      "types": [
+        "water"
+      ],
+      "typesZhHans": [
+        "水"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 210,
+      "nationalDex": 657,
+      "slug": "frogadier",
+      "names": {
+        "zh-Hant": "呱頭蛙",
+        "en": "Frogadier",
+        "ja": "ゲコガシラ",
+        "zh-Hans": "呱头蛙"
+      },
+      "types": [
+        "water"
+      ],
+      "typesZhHans": [
+        "水"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 211,
+      "nationalDex": 658,
+      "slug": "greninja",
+      "names": {
+        "zh-Hant": "甲賀忍蛙",
+        "en": "Greninja",
+        "ja": "ゲッコウガ",
+        "zh-Hans": "甲贺忍蛙"
+      },
+      "types": [
+        "water",
+        "dark"
+      ],
+      "typesZhHans": [
+        "水",
+        "恶"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 212,
+      "nationalDex": 870,
+      "slug": "falinks",
+      "names": {
+        "zh-Hant": "列陣兵",
+        "en": "Falinks",
+        "ja": "タイレーツ",
+        "zh-Hans": "列阵兵"
+      },
+      "types": [
+        "fighting"
+      ],
+      "typesZhHans": [
+        "格斗"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 213,
+      "nationalDex": 650,
+      "slug": "chespin",
+      "names": {
+        "zh-Hant": "哈力栗",
+        "en": "Chespin",
+        "ja": "ハリマロン",
+        "zh-Hans": "哈力栗"
+      },
+      "types": [
+        "grass"
+      ],
+      "typesZhHans": [
+        "草"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 214,
+      "nationalDex": 651,
+      "slug": "quilladin",
+      "names": {
+        "zh-Hant": "胖胖哈力",
+        "en": "Quilladin",
+        "ja": "ハリボーグ",
+        "zh-Hans": "胖胖哈力"
+      },
+      "types": [
+        "grass"
+      ],
+      "typesZhHans": [
+        "草"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 215,
+      "nationalDex": 652,
+      "slug": "chesnaught",
+      "names": {
+        "zh-Hant": "布里卡隆",
+        "en": "Chesnaught",
+        "ja": "ブリガロン",
+        "zh-Hans": "布里卡隆"
+      },
+      "types": [
+        "grass",
+        "fighting"
+      ],
+      "typesZhHans": [
+        "草",
+        "格斗"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 216,
+      "nationalDex": 227,
+      "slug": "skarmory",
+      "names": {
+        "zh-Hant": "盔甲鳥",
+        "en": "Skarmory",
+        "ja": "エアームド",
+        "zh-Hans": "盔甲鸟"
+      },
+      "types": [
+        "steel",
+        "flying"
+      ],
+      "typesZhHans": [
+        "钢",
+        "飞行"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 217,
+      "nationalDex": 653,
+      "slug": "fennekin",
+      "names": {
+        "zh-Hant": "火狐狸",
+        "en": "Fennekin",
+        "ja": "フォッコ",
+        "zh-Hans": "火狐狸"
+      },
+      "types": [
+        "fire"
+      ],
+      "typesZhHans": [
+        "火"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 218,
+      "nationalDex": 654,
+      "slug": "braixen",
+      "names": {
+        "zh-Hant": "長尾火狐",
+        "en": "Braixen",
+        "ja": "テールナー",
+        "zh-Hans": "长尾火狐"
+      },
+      "types": [
+        "fire"
+      ],
+      "typesZhHans": [
+        "火"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 219,
+      "nationalDex": 655,
+      "slug": "delphox",
+      "names": {
+        "zh-Hant": "妖火紅狐",
+        "en": "Delphox",
+        "ja": "マフォクシー",
+        "zh-Hans": "妖火红狐"
+      },
+      "types": [
+        "fire",
+        "psychic"
+      ],
+      "typesZhHans": [
+        "火",
+        "超能力"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 220,
+      "nationalDex": 371,
+      "slug": "bagon",
+      "names": {
+        "zh-Hant": "寶貝龍",
+        "en": "Bagon",
+        "ja": "タツベイ",
+        "zh-Hans": "宝贝龙"
+      },
+      "types": [
+        "dragon"
+      ],
+      "typesZhHans": [
+        "龙"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 221,
+      "nationalDex": 372,
+      "slug": "shelgon",
+      "names": {
+        "zh-Hant": "甲殼龍",
+        "en": "Shelgon",
+        "ja": "コモルー",
+        "zh-Hans": "甲壳龙"
+      },
+      "types": [
+        "dragon"
+      ],
+      "typesZhHans": [
+        "龙"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 222,
+      "nationalDex": 373,
+      "slug": "salamence",
+      "names": {
+        "zh-Hant": "暴飛龍",
+        "en": "Salamence",
+        "ja": "ボーマンダ",
+        "zh-Hans": "暴飞龙"
+      },
+      "types": [
+        "dragon",
+        "flying"
+      ],
+      "typesZhHans": [
+        "龙",
+        "飞行"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 223,
+      "nationalDex": 115,
+      "slug": "kangaskhan",
+      "names": {
+        "zh-Hant": "袋獸",
+        "en": "Kangaskhan",
+        "ja": "ガルーラ",
+        "zh-Hans": "袋兽"
+      },
+      "types": [
+        "normal"
+      ],
+      "typesZhHans": [
+        "一般"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 224,
+      "nationalDex": 780,
+      "slug": "drampa",
+      "names": {
+        "zh-Hant": "老翁龍",
+        "en": "Drampa",
+        "ja": "ジジーロン",
+        "zh-Hans": "老翁龙"
+      },
+      "types": [
+        "normal",
+        "dragon"
+      ],
+      "typesZhHans": [
+        "一般",
+        "龙"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 225,
+      "nationalDex": 374,
+      "slug": "beldum",
+      "names": {
+        "zh-Hant": "鐵啞鈴",
+        "en": "Beldum",
+        "ja": "ダンバル",
+        "zh-Hans": "铁哑铃"
+      },
+      "types": [
+        "steel",
+        "psychic"
+      ],
+      "typesZhHans": [
+        "钢",
+        "超能力"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 226,
+      "nationalDex": 375,
+      "slug": "metang",
+      "names": {
+        "zh-Hant": "金屬怪",
+        "en": "Metang",
+        "ja": "メタング",
+        "zh-Hans": "金属怪"
+      },
+      "types": [
+        "steel",
+        "psychic"
+      ],
+      "typesZhHans": [
+        "钢",
+        "超能力"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 227,
+      "nationalDex": 376,
+      "slug": "metagross",
+      "names": {
+        "zh-Hant": "巨金怪",
+        "en": "Metagross",
+        "ja": "メタグロス",
+        "zh-Hans": "巨金怪"
+      },
+      "types": [
+        "steel",
+        "psychic"
+      ],
+      "typesZhHans": [
+        "钢",
+        "超能力"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 228,
+      "nationalDex": 716,
+      "slug": "xerneas",
+      "names": {
+        "zh-Hant": "哲爾尼亞斯",
+        "en": "Xerneas",
+        "ja": "ゼルネアス",
+        "zh-Hans": "哲尔尼亚斯"
+      },
+      "types": [
+        "fairy"
+      ],
+      "typesZhHans": [
+        "妖精"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": true,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 229,
+      "nationalDex": 717,
+      "slug": "yveltal",
+      "names": {
+        "zh-Hant": "伊裴爾塔爾",
+        "en": "Yveltal",
+        "ja": "イベルタル",
+        "zh-Hans": "伊裴尔塔尔"
+      },
+      "types": [
+        "dark",
+        "flying"
+      ],
+      "typesZhHans": [
+        "恶",
+        "飞行"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": true,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 230,
+      "nationalDex": 718,
+      "slug": "zygarde",
+      "names": {
+        "zh-Hant": "基格爾德",
+        "en": "Zygarde",
+        "ja": "ジガルデ",
+        "zh-Hans": "基格尔德"
+      },
+      "types": [
+        "dragon",
+        "ground"
+      ],
+      "typesZhHans": [
+        "龙",
+        "地面"
+      ],
+      "requiredForCompletion": true,
+      "isStarterChoice": false,
+      "isLegendary": true,
+      "isMythical": false
+    },
+    {
+      "lumioseDex": 231,
+      "nationalDex": 719,
+      "slug": "diancie",
+      "names": {
+        "zh-Hant": "蒂安希",
+        "en": "Diancie",
+        "ja": "ディアンシー",
+        "zh-Hans": "蒂安希"
+      },
+      "types": [
+        "rock",
+        "fairy"
+      ],
+      "typesZhHans": [
+        "岩石",
+        "妖精"
+      ],
+      "requiredForCompletion": false,
+      "isStarterChoice": false,
+      "isLegendary": false,
+      "isMythical": true
+    },
+    {
+      "lumioseDex": 232,
+      "nationalDex": 150,
+      "slug": "mewtwo",
+      "names": {
+        "zh-Hant": "超夢",
+        "en": "Mewtwo",
+        "ja": "ミュウツー",
+        "zh-Hans": "超梦"
+      },
+      "types": [
+        "psychic"
+      ],
+      "typesZhHans": [
+        "超能力"
+      ],
+      "requiredForCompletion": false,
+      "isStarterChoice": false,
+      "isLegendary": true,
+      "isMythical": false
+    }
+  ]
+}

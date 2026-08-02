@@ -1,0 +1,10 @@
+.pokediy-root {
+    clear: both;
+    min-height: 32rem;
+}
+
+.pokediy-root:empty::before {
+    content: '';
+    display: block;
+    min-height: 32rem;
+}

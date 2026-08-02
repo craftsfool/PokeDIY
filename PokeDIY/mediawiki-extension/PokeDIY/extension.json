@@ -1,0 +1,29 @@
+{
+  "name": "PokeDIY",
+  "version": "0.1.0",
+  "author": ["52Poké community contributors"],
+  "url": "https://github.com/52poke/52poke",
+  "descriptionmsg": "pokediy-desc",
+  "license-name": "BSD-3-Clause",
+  "type": "specialpage",
+  "requires": {
+    "MediaWiki": ">= 1.43.0"
+  },
+  "AutoloadClasses": {
+    "MediaWiki\\Extension\\PokeDIY\\SpecialPokeDIY": "includes/SpecialPokeDIY.php"
+  },
+  "SpecialPages": {
+    "PokeDIY": "MediaWiki\\Extension\\PokeDIY\\SpecialPokeDIY"
+  },
+  "MessagesDirs": {
+    "PokeDIY": ["i18n"]
+  },
+  "ResourceModules": {
+    "ext.pokediy": {
+      "scripts": ["resources/ext.pokediy.js"],
+      "styles": ["resources/ext.pokediy.css"],
+      "dependencies": ["mediawiki.api", "mediawiki.storage", "mediawiki.util"]
+    }
+  },
+  "manifest_version": 2
+}

@@ -1,0 +1,491 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-08-01T05:48:43.208Z",
+  "license": {
+    "name": "CC BY-NC-SA 3.0",
+    "url": "https://creativecommons.org/licenses/by-nc-sa/3.0/deed.zh-hans",
+    "attribution": "52Poké Wiki contributors"
+  },
+  "source": {
+    "title": "Template:进化框/Evo",
+    "revisionId": 2514202,
+    "pageUrl": "https://wiki.52poke.com/wiki/Template%3A%E8%BF%9B%E5%8C%96%E6%A1%86%2FEvo",
+    "apiUrl": "https://wiki.52poke.com/api.php?action=parse&page=Template%3A%E8%BF%9B%E5%8C%96%E6%A1%86%2FEvo&prop=wikitext%7Crevid&format=json&formatversion=2"
+  },
+  "count": 19,
+  "methods": [
+    {
+      "id": "Level",
+      "label": "等级",
+      "group": "常用",
+      "description": "达到指定等级，并可附加时间或天气条件。",
+      "fields": [
+        {
+          "key": "level",
+          "label": "等级",
+          "kind": "number",
+          "min": 1,
+          "max": 100,
+          "defaultValue": "1"
+        },
+        {
+          "key": "time",
+          "label": "时间",
+          "kind": "time"
+        },
+        {
+          "key": "weather",
+          "label": "天气",
+          "kind": "text",
+          "placeholder": "可选，例如：下雨"
+        },
+        {
+          "key": "extra",
+          "label": "附加条件",
+          "kind": "text",
+          "placeholder": "可选，例如：雄性、在特定游戏中"
+        }
+      ]
+    },
+    {
+      "id": "Happiness",
+      "label": "亲密度／友好度",
+      "group": "常用",
+      "description": "亲密度或友好度达到要求后提升等级。",
+      "fields": [
+        {
+          "key": "friendship",
+          "label": "要求数值",
+          "kind": "number",
+          "min": 0,
+          "max": 255,
+          "defaultValue": "158"
+        },
+        {
+          "key": "time",
+          "label": "时间",
+          "kind": "time"
+        },
+        {
+          "key": "moveType",
+          "label": "招式属性",
+          "kind": "type",
+          "optional": true
+        },
+        {
+          "key": "extra",
+          "label": "附加条件",
+          "kind": "text",
+          "placeholder": "可选"
+        }
+      ]
+    },
+    {
+      "id": "Item",
+      "label": "使用道具",
+      "group": "常用",
+      "description": "使用进化石或其他指定道具。",
+      "aliases": [
+        "Stone"
+      ],
+      "fields": [
+        {
+          "key": "item",
+          "label": "道具",
+          "kind": "text",
+          "placeholder": "例如：雷之石"
+        },
+        {
+          "key": "time",
+          "label": "时间／月相",
+          "kind": "time-moon"
+        },
+        {
+          "key": "extra",
+          "label": "附加条件",
+          "kind": "text",
+          "placeholder": "可选"
+        }
+      ]
+    },
+    {
+      "id": "Move",
+      "label": "学会招式",
+      "group": "常用",
+      "description": "学会指定招式后提升等级。",
+      "fields": [
+        {
+          "key": "move",
+          "label": "招式",
+          "kind": "move",
+          "placeholder": "选择或填写招式"
+        },
+        {
+          "key": "extra",
+          "label": "附加条件",
+          "kind": "text",
+          "placeholder": "可选"
+        }
+      ]
+    },
+    {
+      "id": "Held",
+      "label": "携带道具",
+      "group": "常用",
+      "description": "携带指定道具后提升等级。",
+      "fields": [
+        {
+          "key": "heldItem",
+          "label": "携带道具",
+          "kind": "text",
+          "placeholder": "例如：锐利之爪"
+        },
+        {
+          "key": "time",
+          "label": "时间",
+          "kind": "time"
+        },
+        {
+          "key": "extra",
+          "label": "附加条件",
+          "kind": "text",
+          "placeholder": "可选"
+        }
+      ]
+    },
+    {
+      "id": "Trade",
+      "label": "连接交换",
+      "group": "常用",
+      "description": "交换时进化，可指定携带道具或交换对象。",
+      "fields": [
+        {
+          "key": "heldItem",
+          "label": "携带道具",
+          "kind": "text",
+          "placeholder": "可选"
+        },
+        {
+          "key": "partner",
+          "label": "交换对象",
+          "kind": "pokemon",
+          "optional": true
+        },
+        {
+          "key": "extra",
+          "label": "附加条件",
+          "kind": "text",
+          "placeholder": "可选"
+        }
+      ]
+    },
+    {
+      "id": "Location",
+      "label": "特定地点",
+      "group": "等级与环境",
+      "description": "来到指定地点附近后提升等级。",
+      "fields": [
+        {
+          "key": "location",
+          "label": "地点",
+          "kind": "text",
+          "placeholder": "例如：苔岩附近"
+        },
+        {
+          "key": "extra",
+          "label": "附加条件",
+          "kind": "text",
+          "placeholder": "可选"
+        }
+      ]
+    },
+    {
+      "id": "Beautiful",
+      "label": "美丽度",
+      "group": "等级与环境",
+      "description": "美丽度达到要求后提升等级。",
+      "aliases": [
+        "Contest"
+      ],
+      "fields": [
+        {
+          "key": "beauty",
+          "label": "美丽度",
+          "kind": "number",
+          "min": 0,
+          "max": 255,
+          "defaultValue": "170"
+        },
+        {
+          "key": "extra",
+          "label": "附加条件",
+          "kind": "text",
+          "placeholder": "可选"
+        }
+      ]
+    },
+    {
+      "id": "Movetype",
+      "label": "学会特定属性招式",
+      "group": "招式与对战",
+      "description": "学会指定属性的招式后提升等级。",
+      "fields": [
+        {
+          "key": "moveType",
+          "label": "招式属性",
+          "kind": "type"
+        },
+        {
+          "key": "extra",
+          "label": "附加条件",
+          "kind": "text",
+          "placeholder": "可选"
+        }
+      ]
+    },
+    {
+      "id": "Movetimes",
+      "label": "使用招式指定次数",
+      "group": "招式与对战",
+      "description": "按指定方式使出某个招式若干次。",
+      "fields": [
+        {
+          "key": "move",
+          "label": "招式",
+          "kind": "move",
+          "placeholder": "选择或填写招式"
+        },
+        {
+          "key": "times",
+          "label": "次数",
+          "kind": "number",
+          "min": 1,
+          "max": 999,
+          "defaultValue": "20"
+        },
+        {
+          "key": "style",
+          "label": "使用方式",
+          "kind": "text",
+          "placeholder": "可选，例如：刚猛"
+        },
+        {
+          "key": "extra",
+          "label": "附加条件",
+          "kind": "text",
+          "placeholder": "可选"
+        }
+      ]
+    },
+    {
+      "id": "Hittimes",
+      "label": "累计命中目标",
+      "group": "招式与对战",
+      "description": "使用指定招式累计攻击一定数量的目标。",
+      "fields": [
+        {
+          "key": "move",
+          "label": "招式",
+          "kind": "move",
+          "placeholder": "选择或填写招式"
+        },
+        {
+          "key": "times",
+          "label": "目标数量",
+          "kind": "number",
+          "min": 1,
+          "max": 999,
+          "defaultValue": "20"
+        },
+        {
+          "key": "extra",
+          "label": "附加条件",
+          "kind": "text",
+          "placeholder": "可选"
+        }
+      ]
+    },
+    {
+      "id": "Critical",
+      "label": "击中要害",
+      "group": "招式与对战",
+      "description": "在一场对战中击中要害指定次数。",
+      "fields": [
+        {
+          "key": "critical",
+          "label": "次数",
+          "kind": "number",
+          "min": 1,
+          "max": 99,
+          "defaultValue": "3"
+        },
+        {
+          "key": "extra",
+          "label": "附加条件",
+          "kind": "text",
+          "placeholder": "可选"
+        }
+      ]
+    },
+    {
+      "id": "Damage",
+      "label": "受到伤害后到达地点",
+      "group": "招式与对战",
+      "description": "受到至少指定伤害后，前往特定地点。",
+      "fields": [
+        {
+          "key": "damage",
+          "label": "伤害",
+          "kind": "number",
+          "min": 1,
+          "max": 9999,
+          "defaultValue": "49"
+        },
+        {
+          "key": "location",
+          "label": "地点",
+          "kind": "text",
+          "placeholder": "例如：沙尘洼地下方"
+        },
+        {
+          "key": "extra",
+          "label": "附加条件",
+          "kind": "text",
+          "placeholder": "可选"
+        }
+      ]
+    },
+    {
+      "id": "Pokémon",
+      "label": "与特定宝可梦同行",
+      "group": "同行与操作",
+      "description": "队伍中有指定宝可梦时提升等级。",
+      "fields": [
+        {
+          "key": "partner",
+          "label": "同行宝可梦",
+          "kind": "pokemon"
+        },
+        {
+          "key": "extra",
+          "label": "附加条件",
+          "kind": "text",
+          "placeholder": "可选"
+        }
+      ]
+    },
+    {
+      "id": "Affection",
+      "label": "友好度＋招式属性",
+      "group": "同行与操作",
+      "description": "友好度达到要求，并满足招式属性等条件后升级。",
+      "fields": [
+        {
+          "key": "friendship",
+          "label": "友好度",
+          "kind": "number",
+          "min": 0,
+          "max": 255,
+          "defaultValue": "158"
+        },
+        {
+          "key": "moveType",
+          "label": "招式属性",
+          "kind": "type",
+          "optional": true
+        },
+        {
+          "key": "time",
+          "label": "时间",
+          "kind": "time"
+        },
+        {
+          "key": "extra",
+          "label": "附加条件",
+          "kind": "text",
+          "placeholder": "可选"
+        }
+      ]
+    },
+    {
+      "id": "Spin",
+      "label": "原地旋转",
+      "group": "同行与操作",
+      "description": "主角完成指定的原地旋转操作。",
+      "fields": [
+        {
+          "key": "heldItem",
+          "label": "携带道具",
+          "kind": "text",
+          "placeholder": "可选，例如：草莓糖饰"
+        },
+        {
+          "key": "style",
+          "label": "旋转方式",
+          "kind": "text",
+          "placeholder": "可选，例如：顺时针 5 秒以上"
+        },
+        {
+          "key": "time",
+          "label": "时间",
+          "kind": "time"
+        },
+        {
+          "key": "extra",
+          "label": "附加条件",
+          "kind": "text",
+          "placeholder": "可选"
+        }
+      ]
+    },
+    {
+      "id": "Letsgo",
+      "label": "Let's Go 行走",
+      "group": "同行与操作",
+      "description": "在 Let's Go 模式中行走指定步数后提升等级。",
+      "fields": [
+        {
+          "key": "steps",
+          "label": "步数",
+          "kind": "number",
+          "min": 1,
+          "max": 99999,
+          "defaultValue": "1000"
+        },
+        {
+          "key": "extra",
+          "label": "附加条件",
+          "kind": "text",
+          "placeholder": "可选"
+        }
+      ]
+    },
+    {
+      "id": "Other",
+      "label": "其他／特殊条件",
+      "group": "其他",
+      "description": "用于联机、累计伤害、收集物品等特殊进化条件。",
+      "fields": [
+        {
+          "key": "description",
+          "label": "完整条件",
+          "kind": "textarea",
+          "placeholder": "例如：在集友圈中达到等级 38"
+        },
+        {
+          "key": "extra",
+          "label": "版本／形态限制",
+          "kind": "text",
+          "placeholder": "可选"
+        }
+      ]
+    },
+    {
+      "id": "None",
+      "label": "无进化方式",
+      "group": "其他",
+      "description": "该节点不再进化，或仅用于说明形态关系。",
+      "fields": []
+    }
+  ]
+}
