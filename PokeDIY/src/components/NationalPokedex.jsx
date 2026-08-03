@@ -16,20 +16,45 @@ import {
 import { getTypePalette, StatMeter, TypeBadge, TypeIcon } from "./PokemonDecor";
 
 const TYPES = ["一般", "格斗", "飞行", "毒", "地面", "岩石", "虫", "幽灵", "钢", "火", "水", "草", "电", "超能力", "冰", "龙", "恶", "妖精"];
-const REGIONS = [
-  ["关都", 1], ["城都", 2], ["丰缘", 3], ["神奥", 4], ["合众", 5],
-  ["卡洛斯", 6], ["阿罗拉", 7], ["伽勒尔／洗翠", 8], ["帕底亚", 9],
+const REGIONS = ["关都", "城都", "丰缘", "神奥", "合众", "卡洛斯", "阿罗拉", "伽勒尔", "洗翠", "帕底亚"];
+const REGION_BY_GENERATION = {
+  1: "关都", 2: "城都", 3: "丰缘", 4: "神奥", 5: "合众",
+  6: "卡洛斯", 7: "阿罗拉", 9: "帕底亚",
+};
+const FORM_REGION_MARKERS = [
+  ["-alola", "阿罗拉"], ["-galar", "伽勒尔"], ["-hisui", "洗翠"], ["-paldea", "帕底亚"],
 ];
-const REGION_BY_GENERATION = Object.fromEntries(REGIONS.map(([name, generation]) => [generation, name]));
 const PAGE_SIZE = 60;
 const ARTWORK_ROOT = "/assets/pokemon-art";
 const PIXEL_ARTWORK_ROOT = "/assets/pokemon-pixel";
+const FORM_ARTWORK_ROOT = "/assets/pokemon-art-forms";
+const FORM_PIXEL_ARTWORK_ROOT = "/assets/pokemon-pixel-forms";
 const STYLE_STORAGE_KEY = "pokediy-dex-visual-style-v1";
 
 function artworkUrl(entry, pixelMode = false) {
+  if (entry.formClass === "地区形态") {
+    const root = pixelMode ? FORM_PIXEL_ARTWORK_ROOT : FORM_ARTWORK_ROOT;
+    return `${root}/${entry.slug}.${pixelMode ? "png" : "webp"}?v=1`;
+  }
   return pixelMode
     ? `${PIXEL_ARTWORK_ROOT}/${entry.nationalDex}.png`
     : `${ARTWORK_ROOT}/${entry.nationalDex}.webp`;
+}
+
+function regionForEntry(entry) {
+  if (entry.formClass === "地区形态") {
+    return FORM_REGION_MARKERS.find(([marker]) => entry.slug?.includes(marker))?.[1] || REGION_BY_GENERATION[entry.generation];
+  }
+  if (entry.generation === 8) return entry.nationalDex >= 899 ? "洗翠" : "伽勒尔";
+  return REGION_BY_GENERATION[entry.generation];
+}
+
+function specificFormLabel(entry) {
+  if (!entry.formLabel) return "";
+  return entry.formLabel
+    .replace(/^(?:阿罗拉|伽勒尔|洗翠|帕底亚)的样子\s*/, "")
+    .replace(/[（）()]/g, " ")
+    .trim();
 }
 
 function sectionUrl(entry, section) {
@@ -55,7 +80,7 @@ function DetailLink({ href, className, icon: Icon, title, children }) {
 }
 
 function EvolutionContent({ entry, detail, pixelMode }) {
-  const stages = [detail?.evolution?.previous, { nationalDex: entry.nationalDex, name: entry.names["zh-Hans"], current: true }, ...(detail?.evolution?.next || []).slice(0, 2)].filter(Boolean);
+  const stages = [detail?.evolution?.previous, { ...entry, name: entry.names["zh-Hans"], current: true }, ...(detail?.evolution?.next || []).slice(0, 2)].filter(Boolean);
   return (
     <div className="dex-evolution-line">
       {stages.length === 1 ? <p>暂未发现进化关系</p> : stages.map((stage, index) => (
@@ -73,6 +98,7 @@ function DexDetailCard({ entry, detail, placement, mobile, onClose, pixelMode })
   const abilities = detail?.abilities || [];
   const commonAbilities = abilities.filter((item) => !item.hidden).slice(0, 2);
   const hiddenAbility = abilities.find((item) => item.hidden);
+  const formDetail = specificFormLabel(entry);
   const palette = getTypePalette(entry.typesZhHans?.[0]);
   const style = {
     "--dex-main": palette.main,
@@ -88,7 +114,7 @@ function DexDetailCard({ entry, detail, placement, mobile, onClose, pixelMode })
         <div>
           <small>全国图鉴 #{String(entry.nationalDex).padStart(4, "0")}</small>
           <h2>{entry.names["zh-Hans"]}</h2>
-          {entry.formLabel && <p>{entry.formLabel}</p>}
+          {formDetail && <p>{formDetail}</p>}
         </div>
         <img src={artworkUrl(entry, pixelMode)} alt="" />
       </a>
@@ -121,6 +147,7 @@ function DexCard({ entry, detail, onMobileOpen, pixelMode }) {
   const [active, setActive] = useState(false);
   const [placement, setPlacement] = useState({ left: 0, top: 104 });
   const cardRef = useRef(null);
+  const formDetail = specificFormLabel(entry);
   const palette = getTypePalette(entry.typesZhHans?.[0]);
   const style = { "--dex-main": palette.main, "--dex-light": palette.light, "--dex-dark": palette.dark };
 
@@ -155,11 +182,11 @@ function DexCard({ entry, detail, onMobileOpen, pixelMode }) {
       aria-label={`查看${entry.names["zh-Hans"]}详情`}
     >
       <div className="dex-card-title"><strong>{entry.names["zh-Hans"]}</strong><span>#{String(entry.nationalDex).padStart(4, "0")}</span></div>
-      {entry.formLabel && <span className="dex-form-label">{entry.formLabel}</span>}
+      {formDetail && <span className="dex-form-label">{formDetail}</span>}
       <div className="dex-artwork-wrap"><img src={artworkUrl(entry, pixelMode)} alt={entry.names["zh-Hans"]} loading="lazy" /></div>
       <div className="dex-card-meta">
         <div>{entry.typesZhHans.map((type) => <TypeBadge type={type} compact key={type} />)}</div>
-        <span><MapPin size={12} />{REGION_BY_GENERATION[entry.generation]}</span>
+        <span><MapPin size={12} />{entry.region}</span>
       </div>
       {active && <DexDetailCard entry={entry} detail={detail} placement={placement} pixelMode={pixelMode} />}
     </article>
@@ -194,7 +221,7 @@ export function NationalPokedex({ onOpenEditor }) {
       const combined = [
         ...(national.entries || []),
         ...(national.alternateForms || []).map((entry) => ({ ...entry, formClass: "地区形态" })),
-      ];
+      ].map((entry) => ({ ...entry, region: regionForEntry(entry) }));
       combined.sort((a, b) => a.nationalDex - b.nationalDex || Boolean(a.formLabel) - Boolean(b.formLabel));
       setEntries(combined);
       setDetails(cardDetails.entries || {});
@@ -215,17 +242,17 @@ export function NationalPokedex({ onOpenEditor }) {
 
   const counts = useMemo(() => ({
     types: Object.fromEntries(TYPES.map((value) => [value, entries.filter((entry) => entry.typesZhHans?.includes(value)).length])),
-    regions: Object.fromEntries(REGIONS.map(([name, generation]) => [name, entries.filter((entry) => entry.generation === generation).length])),
+    regions: Object.fromEntries(REGIONS.map((name) => [name, entries.filter((entry) => entry.region === name).length])),
     categories: Object.fromEntries(["初始伙伴", "传说", "幻之", "地区形态"].map((value) => [value, entries.filter((entry) => hasTag(entry, value)).length])),
   }), [entries]);
 
   const filtered = useMemo(() => {
     const normalized = query.trim().toLowerCase().replace(/^#/, "");
     const output = entries.filter((entry) => {
-      const searchable = [entry.nationalDex, entry.names["zh-Hans"], entry.names.ja, entry.names.en, entry.formLabel].join(" ").toLowerCase();
+      const searchable = [entry.nationalDex, entry.names["zh-Hans"], entry.names.ja, entry.names.en, entry.formLabel, entry.region].join(" ").toLowerCase();
       return (!normalized || searchable.includes(normalized))
         && (type === "全部" || entry.typesZhHans?.includes(type))
-        && (region === "全部" || REGION_BY_GENERATION[entry.generation] === region)
+        && (region === "全部" || entry.region === region)
         && (category === "全部" || hasTag(entry, category));
     });
     output.sort((a, b) => sort === "desc"
@@ -266,7 +293,7 @@ export function NationalPokedex({ onOpenEditor }) {
         </FilterRow>
         <FilterRow label="地区">
           <FilterButton active={region === "全部"} onClick={() => setRegion("全部")}>全部</FilterButton>
-          {REGIONS.map(([name]) => <FilterButton active={region === name} onClick={() => setRegion(name)} count={counts.regions[name]} key={name}>{name}</FilterButton>)}
+          {REGIONS.map((name) => <FilterButton active={region === name} onClick={() => setRegion(name)} count={counts.regions[name]} key={name}>{name}</FilterButton>)}
         </FilterRow>
         <FilterRow label="分类">
           {['全部', '初始伙伴', '传说', '幻之', '地区形态'].map((value) => <FilterButton active={category === value} onClick={() => setCategory(value)} count={value === '全部' ? undefined : counts.categories[value]} key={value}>{value}</FilterButton>)}

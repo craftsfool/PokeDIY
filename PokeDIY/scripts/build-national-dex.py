@@ -25,10 +25,16 @@ NATIONAL_PATH = ROOT / "data/national/national-pokedex.json"
 OUTPUT_PATH = ROOT / "data/national/pokemon-card-details.json"
 ARTWORK_DIR = ROOT / "data/assets/pokemon-art"
 PIXEL_ARTWORK_DIR = ROOT / "data/assets/pokemon-pixel"
+FORM_ARTWORK_DIR = ROOT / "data/assets/pokemon-art-forms"
+FORM_PIXEL_ARTWORK_DIR = ROOT / "data/assets/pokemon-pixel-forms"
 CSV_ROOT = "https://raw.githubusercontent.com/PokeAPI/pokeapi/master/data/v2/csv"
 ARTWORK_ROOT = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork"
 PIXEL_ARTWORK_ROOT = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon"
 ZH_HANS = "12"
+FORM_IDENTIFIER_ALIASES = {
+    "farfetch-d-galar": "farfetchd-galar",
+    "darmanitan-galar": "darmanitan-galar-standard",
+}
 
 
 def rows(name: str) -> list[dict[str, str]]:
@@ -94,14 +100,67 @@ def build_pixel_artwork() -> None:
     print(f"Pixel artwork ready: {written} written, {1025 - written} cached in {PIXEL_ARTWORK_DIR}")
 
 
+def build_form_artwork(national: dict[str, object], pokemon_rows: list[dict[str, str]], pixel: bool) -> None:
+    """Mirror the exact PokeAPI artwork for every regional form in the local dataset."""
+    forms = national.get("alternateForms", [])
+    pokemon_ids = {row["identifier"]: int(row["id"]) for row in pokemon_rows}
+    target_dir = FORM_PIXEL_ARTWORK_DIR if pixel else FORM_ARTWORK_DIR
+    target_dir.mkdir(parents=True, exist_ok=True)
+
+    resolved: list[tuple[dict[str, object], int]] = []
+    for form in forms:
+        slug = str(form["slug"])
+        identifier = FORM_IDENTIFIER_ALIASES.get(slug, slug)
+        if identifier not in pokemon_ids:
+            raise RuntimeError(f"No PokeAPI Pokémon id found for regional form: {slug}")
+        resolved.append((form, pokemon_ids[identifier]))
+
+    def download(item: tuple[dict[str, object], int]) -> tuple[str, str]:
+        form, pokemon_id = item
+        slug = str(form["slug"])
+        target = target_dir / f"{slug}.{'png' if pixel else 'webp'}"
+        minimum_size = 100 if pixel else 1000
+        if target.exists() and target.stat().st_size > minimum_size:
+            return slug, "cached"
+
+        source_root = PIXEL_ARTWORK_ROOT if pixel else ARTWORK_ROOT
+        with urllib.request.urlopen(f"{source_root}/{pokemon_id}.png", timeout=45) as response:
+            payload = response.read()
+        if pixel:
+            target.write_bytes(payload)
+        else:
+            source = Image.open(io.BytesIO(payload)).convert("RGBA")
+            source.thumbnail((300, 300), Image.Resampling.LANCZOS)
+            canvas = Image.new("RGBA", (300, 300), (255, 255, 255, 0))
+            canvas.alpha_composite(source, ((300 - source.width) // 2, (300 - source.height) // 2))
+            canvas.save(target, "WEBP", quality=82, method=4)
+        return slug, "written"
+
+    written = 0
+    with ThreadPoolExecutor(max_workers=18) as executor:
+        futures = [executor.submit(download, item) for item in resolved]
+        for future in as_completed(futures):
+            _, state = future.result()
+            written += state == "written"
+    kind = "pixel" if pixel else "official"
+    print(f"Regional form {kind} artwork ready: {written} written, {len(resolved) - written} cached in {target_dir}")
+
+
 def main() -> None:
     national = json.loads(NATIONAL_PATH.read_text(encoding="utf-8"))
+    if "--form-artwork-only" in sys.argv:
+        pokemon_rows = rows("pokemon")
+        build_form_artwork(national, pokemon_rows, pixel=False)
+        build_form_artwork(national, pokemon_rows, pixel=True)
+        return
+
     chinese_by_id = {
         int(entry["nationalDex"]): entry["names"]["zh-Hans"]
         for entry in national["entries"]
     }
 
-    pokemon = {int(row["id"]): row for row in rows("pokemon") if row["is_default"] == "1"}
+    pokemon_rows = rows("pokemon")
+    pokemon = {int(row["id"]): row for row in pokemon_rows if row["is_default"] == "1"}
     species_rows = {int(row["id"]): row for row in rows("pokemon_species")}
 
     stat_keys = {1: "HP", 2: "攻击", 3: "防御", 4: "特攻", 5: "特防", 6: "速度"}
@@ -240,8 +299,10 @@ def main() -> None:
     print(f"Wrote {len(entries)} Pokédex card records to {OUTPUT_PATH}")
     if "--with-artwork" in sys.argv:
         build_artwork()
+        build_form_artwork(national, pokemon_rows, pixel=False)
     if "--with-pixel-artwork" in sys.argv:
         build_pixel_artwork()
+        build_form_artwork(national, pokemon_rows, pixel=True)
 
 
 if __name__ == "__main__":
