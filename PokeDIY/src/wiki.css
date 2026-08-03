@@ -594,35 +594,50 @@ a:hover {
   white-space: nowrap;
 }
 .mw-search {
-  height: 34px;
+  width: 100%;
+  min-width: 0;
+  height: 36px;
   margin-top: 2px;
   display: grid;
-  grid-template-columns: 31px 1fr auto;
-  align-items: center;
+  grid-template-columns: 34px minmax(0, 1fr) 62px;
+  align-items: stretch;
+  overflow: hidden;
   border: 1px solid var(--wiki-border);
   background: white;
 }
 .mw-search svg {
-  margin-left: 10px;
+  align-self: center;
+  justify-self: center;
+  margin: 0;
   color: #72777d;
 }
 .mw-search input {
-  height: 32px;
+  width: 100%;
+  height: 100%;
   min-width: 0;
+  margin: 0;
   border: 0;
   outline: 0;
   padding: 4px 8px;
   font-size: 13px;
+  line-height: 1.2;
 }
 .mw-search button {
-  height: 32px;
-  min-width: 51px;
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  display: grid;
+  place-items: center;
+  margin: 0;
   border: 0;
   border-left: 1px solid var(--wiki-border);
   background: #f8f9fa;
+  padding: 0 10px;
   cursor: pointer;
   font-size: 13px;
   font-weight: 700;
+  line-height: 1;
+  white-space: nowrap;
 }
 .mw-search button:hover {
   background: #fff;
@@ -2161,6 +2176,8 @@ a:hover {
 .dex-pixel-body .mw-source-logo { width: 40px; height: 40px; }
 .dex-pixel-body .mw-source-wordmark { width: 138px; }
 .dex-pixel-body .mw-search {
+  height: 44px;
+  grid-template-columns: 38px minmax(0, 1fr) 70px;
   border: 3px solid #18243f;
   background: var(--gba-paper);
   box-shadow: inset 0 0 0 2px #7b94a5, 3px 3px 0 #101c38;
@@ -2171,6 +2188,8 @@ a:hover {
   color: var(--gba-ink);
   font-size: 14px;
 }
+.dex-pixel-body .mw-search input { padding: 5px 10px; }
+.dex-pixel-body .mw-search button { border-left: 3px solid #18243f; padding: 0 12px; }
 .dex-pixel-body .mw-search svg { color: var(--gba-ink); }
 .dex-pixel-body .mw-account a { color: #e5f6c8; text-shadow: 1px 1px 0 #101c38; }
 .dex-pixel-body .dex-page {
@@ -2481,9 +2500,17 @@ a:hover {
 .dex-pixel-body .dex-mobile-scrim { background: rgba(23,43,84,.68); }
 .dex-pixel-body .dex-detail-close { border: 3px solid #172b54; border-radius: 0; background: #fffde5; box-shadow: 2px 2px 0 #172b54; }
 
+@media (min-width: 561px) and (max-width: 850px) {
+  .dex-pixel-body .mw-header {
+    height: auto;
+    min-height: 128px;
+    align-items: start;
+  }
+}
+
 @media (max-width: 760px) {
   .dex-pixel-body .mw-header {
-    min-height: 105px;
+    min-height: 128px;
     border-left-width: 0;
     border-right-width: 0;
     padding: 8px 10px;
@@ -2959,6 +2986,7 @@ a:hover {
     min-height: 112px;
     grid-template-columns: 24px minmax(0, 1fr) 36px;
   }
+  .dex-pixel-body .mw-header { min-height: 105px; }
   .mw-search {
     display: none;
   }
