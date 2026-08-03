@@ -30,6 +30,16 @@ const PIXEL_ARTWORK_ROOT = "/assets/pokemon-pixel";
 const FORM_ARTWORK_ROOT = "/assets/pokemon-art-forms";
 const FORM_PIXEL_ARTWORK_ROOT = "/assets/pokemon-pixel-forms";
 const STYLE_STORAGE_KEY = "pokediy-dex-visual-style-v1";
+const REGIONAL_EVOLUTION_ROUTES = {
+  阿罗拉: { 52: [53] },
+  伽勒尔: { 52: [863], 83: [865], 122: [866], 222: [864], 264: [862], 562: [867] },
+  洗翠: { 211: [904], 215: [903] },
+  帕底亚: { 194: [980] },
+};
+const REGIONAL_EVOLUTION_SPECIES = {
+  862: "伽勒尔", 863: "伽勒尔", 864: "伽勒尔", 865: "伽勒尔", 866: "伽勒尔", 867: "伽勒尔",
+  903: "洗翠", 904: "洗翠", 980: "帕底亚",
+};
 
 function artworkUrl(entry, pixelMode = false) {
   if (entry.formClass === "地区形态") {
@@ -79,22 +89,77 @@ function DetailLink({ href, className, icon: Icon, title, children }) {
   );
 }
 
-function EvolutionContent({ entry, detail, pixelMode }) {
-  const stages = [detail?.evolution?.previous, { ...entry, name: entry.names["zh-Hans"], current: true }, ...(detail?.evolution?.next || []).slice(0, 2)].filter(Boolean);
+function evolutionContext(entry) {
+  if (entry.formClass === "地区形态") return entry.region;
+  return REGIONAL_EVOLUTION_SPECIES[entry.nationalDex] || null;
+}
+
+function resolveEvolutionEntry(nationalDex, selectedEntry, context, entries, fallbackName) {
+  if (nationalDex === selectedEntry.nationalDex) {
+    const selectedMatchesContext = selectedEntry.formClass === "地区形态" || !context;
+    if (selectedMatchesContext) return selectedEntry;
+  }
+
+  const candidates = entries.filter((candidate) => candidate.nationalDex === nationalDex);
+  const regional = context && candidates.find((candidate) => candidate.formClass === "地区形态" && candidate.region === context);
+  return regional
+    || candidates.find((candidate) => candidate.formClass !== "地区形态")
+    || candidates[0]
+    || { nationalDex, names: { "zh-Hans": fallbackName || `#${nationalDex}` } };
+}
+
+function allowedEvolutionTargets(nationalDex, evolution, context) {
+  const next = evolution?.next || [];
+  const regionalRoute = context && REGIONAL_EVOLUTION_ROUTES[context]?.[nationalDex];
+  if (regionalRoute) return next.filter((candidate) => regionalRoute.includes(candidate.nationalDex));
+  return next.filter((candidate) => {
+    const exclusiveRegion = REGIONAL_EVOLUTION_SPECIES[candidate.nationalDex];
+    return !exclusiveRegion || exclusiveRegion === context;
+  });
+}
+
+function buildEvolutionChain(selectedEntry, details, entries) {
+  const context = evolutionContext(selectedEntry);
+  let rootDex = selectedEntry.nationalDex;
+  const ancestors = new Set();
+
+  while (!ancestors.has(rootDex)) {
+    ancestors.add(rootDex);
+    const previous = details[String(rootDex)]?.evolution?.previous;
+    if (!previous) break;
+    rootDex = previous.nationalDex;
+  }
+
+  const queue = [{ nationalDex: rootDex, name: null }];
+  const visited = new Set();
+  const chain = [];
+  while (queue.length) {
+    const node = queue.shift();
+    if (visited.has(node.nationalDex)) continue;
+    visited.add(node.nationalDex);
+    const resolved = resolveEvolutionEntry(node.nationalDex, selectedEntry, context, entries, node.name);
+    chain.push({ ...resolved, current: node.nationalDex === selectedEntry.nationalDex });
+    allowedEvolutionTargets(node.nationalDex, details[String(node.nationalDex)]?.evolution, context).forEach((next) => queue.push(next));
+  }
+  return chain;
+}
+
+function EvolutionContent({ entry, details, entries, pixelMode }) {
+  const stages = buildEvolutionChain(entry, details, entries);
+  const density = stages.length > 6 ? "dense" : stages.length > 3 ? "compact" : "short";
   return (
-    <div className="dex-evolution-line">
-      {stages.length === 1 ? <p>暂未发现进化关系</p> : stages.map((stage, index) => (
-        <div className={stage.current ? "current" : ""} key={`${stage.nationalDex}-${index}`}>
-          {index > 0 && <span className="dex-evolution-method">{stage.method || "现在"}</span>}
+    <div className={`dex-evolution-line ${density}`}>
+      {stages.length === 1 ? <p>暂未发现进化关系</p> : stages.map((stage) => (
+        <div className={stage.current ? "current" : ""} key={`${stage.nationalDex}-${stage.slug || "base"}`}>
           <img src={artworkUrl(stage, pixelMode)} alt="" loading="lazy" />
-          <b>{stage.name}</b>
+          <b>{stage.names?.["zh-Hans"] || stage.name}</b>
         </div>
       ))}
     </div>
   );
 }
 
-function DexDetailCard({ entry, detail, placement, mobile, onClose, pixelMode }) {
+function DexDetailCard({ entry, detail, details, entries, placement, mobile, onClose, pixelMode }) {
   const abilities = detail?.abilities || [];
   const commonAbilities = abilities.filter((item) => !item.hidden).slice(0, 2);
   const hiddenAbility = abilities.find((item) => item.hidden);
@@ -135,15 +200,15 @@ function DexDetailCard({ entry, detail, placement, mobile, onClose, pixelMode })
             {Object.entries(detail?.stats || {}).map(([name, value]) => <StatMeter name={name} value={value} key={name} />)}
           </div>
         </DetailLink>
-        <DetailLink className="evolution" href={sectionUrl(entry, "进化")} icon={MapPin} title="进化关系">
-          <EvolutionContent entry={entry} detail={detail} pixelMode={pixelMode} />
+        <DetailLink className="evolution" href={sectionUrl(entry, "进化")} icon={MapPin} title="完整进化链">
+          <EvolutionContent entry={entry} details={details} entries={entries} pixelMode={pixelMode} />
         </DetailLink>
       </div>
     </aside>
   );
 }
 
-function DexCard({ entry, detail, onMobileOpen, pixelMode }) {
+function DexCard({ entry, detail, details, entries, onMobileOpen, pixelMode }) {
   const [active, setActive] = useState(false);
   const [placement, setPlacement] = useState({ left: 0, top: 104 });
   const cardRef = useRef(null);
@@ -188,7 +253,7 @@ function DexCard({ entry, detail, onMobileOpen, pixelMode }) {
         <div>{entry.typesZhHans.map((type) => <TypeBadge type={type} compact key={type} />)}</div>
         <span><MapPin size={12} />{entry.region}</span>
       </div>
-      {active && <DexDetailCard entry={entry} detail={detail} placement={placement} pixelMode={pixelMode} />}
+      {active && <DexDetailCard entry={entry} detail={detail} details={details} entries={entries} placement={placement} pixelMode={pixelMode} />}
     </article>
   );
 }
@@ -303,7 +368,7 @@ export function NationalPokedex({ onOpenEditor }) {
       <div className="dex-results-head"><p><SlidersHorizontal size={16} />找到 <strong>{filtered.length}</strong> 个结果</p><span>将鼠标移到卡片上查看详情；触屏设备轻点卡片</span></div>
       {pageEntries.length ? (
         <section className="dex-grid" aria-live="polite">
-          {pageEntries.map((entry) => <DexCard entry={entry} detail={details[String(entry.nationalDex)]} onMobileOpen={setMobileEntry} pixelMode={pixelMode} key={`${entry.nationalDex}-${entry.formLabel || "base"}`} />)}
+          {pageEntries.map((entry) => <DexCard entry={entry} detail={details[String(entry.nationalDex)]} details={details} entries={entries} onMobileOpen={setMobileEntry} pixelMode={pixelMode} key={`${entry.nationalDex}-${entry.formLabel || "base"}`} />)}
         </section>
       ) : <div className="dex-empty"><Search size={28} /><h2>没有找到符合条件的宝可梦</h2><button className="wiki-button" onClick={clearFilters}>清除筛选</button></div>}
 
@@ -313,7 +378,7 @@ export function NationalPokedex({ onOpenEditor }) {
         <button disabled={page === pageCount} onClick={() => { setPage((value) => value + 1); window.scrollTo({ top: 470, behavior: "smooth" }); }}>下一页<ChevronRight size={17} /></button>
       </footer>
 
-      {mobileEntry && <div className="dex-mobile-scrim" onClick={() => setMobileEntry(null)}><div onClick={(event) => event.stopPropagation()}><DexDetailCard entry={mobileEntry} detail={details[String(mobileEntry.nationalDex)]} mobile onClose={() => setMobileEntry(null)} pixelMode={pixelMode} /></div></div>}
+      {mobileEntry && <div className="dex-mobile-scrim" onClick={() => setMobileEntry(null)}><div onClick={(event) => event.stopPropagation()}><DexDetailCard entry={mobileEntry} detail={details[String(mobileEntry.nationalDex)]} details={details} entries={entries} mobile onClose={() => setMobileEntry(null)} pixelMode={pixelMode} /></div></div>}
     </main>
   );
 }
