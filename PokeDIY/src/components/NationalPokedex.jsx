@@ -9,6 +9,8 @@ import {
   Search,
   SlidersHorizontal,
   Sparkles,
+  Gamepad2,
+  Image as ImageIcon,
   X,
 } from "lucide-react";
 import { getTypePalette, StatMeter, TypeBadge, TypeIcon } from "./PokemonDecor";
@@ -21,9 +23,13 @@ const REGIONS = [
 const REGION_BY_GENERATION = Object.fromEntries(REGIONS.map(([name, generation]) => [generation, name]));
 const PAGE_SIZE = 60;
 const ARTWORK_ROOT = "/assets/pokemon-art";
+const PIXEL_ARTWORK_ROOT = "/assets/pokemon-pixel";
+const STYLE_STORAGE_KEY = "pokediy-dex-visual-style-v1";
 
-function artworkUrl(entry) {
-  return `${ARTWORK_ROOT}/${entry.nationalDex}.webp`;
+function artworkUrl(entry, pixelMode = false) {
+  return pixelMode
+    ? `${PIXEL_ARTWORK_ROOT}/${entry.nationalDex}.png`
+    : `${ARTWORK_ROOT}/${entry.nationalDex}.webp`;
 }
 
 function sectionUrl(entry, section) {
@@ -48,14 +54,14 @@ function DetailLink({ href, className, icon: Icon, title, children }) {
   );
 }
 
-function EvolutionContent({ entry, detail }) {
+function EvolutionContent({ entry, detail, pixelMode }) {
   const stages = [detail?.evolution?.previous, { nationalDex: entry.nationalDex, name: entry.names["zh-Hans"], current: true }, ...(detail?.evolution?.next || []).slice(0, 2)].filter(Boolean);
   return (
     <div className="dex-evolution-line">
       {stages.length === 1 ? <p>暂未发现进化关系</p> : stages.map((stage, index) => (
         <div className={stage.current ? "current" : ""} key={`${stage.nationalDex}-${index}`}>
           {index > 0 && <span className="dex-evolution-method">{stage.method || "现在"}</span>}
-          <img src={`${ARTWORK_ROOT}/${stage.nationalDex}.webp`} alt="" loading="lazy" />
+          <img src={artworkUrl(stage, pixelMode)} alt="" loading="lazy" />
           <b>{stage.name}</b>
         </div>
       ))}
@@ -63,7 +69,7 @@ function EvolutionContent({ entry, detail }) {
   );
 }
 
-function DexDetailCard({ entry, detail, placement, mobile, onClose }) {
+function DexDetailCard({ entry, detail, placement, mobile, onClose, pixelMode }) {
   const abilities = detail?.abilities || [];
   const commonAbilities = abilities.filter((item) => !item.hidden).slice(0, 2);
   const hiddenAbility = abilities.find((item) => item.hidden);
@@ -84,7 +90,7 @@ function DexDetailCard({ entry, detail, placement, mobile, onClose }) {
           <h2>{entry.names["zh-Hans"]}</h2>
           {entry.formLabel && <p>{entry.formLabel}</p>}
         </div>
-        <img src={artworkUrl(entry)} alt="" />
+        <img src={artworkUrl(entry, pixelMode)} alt="" />
       </a>
       <div className="dex-detail-grid">
         <DetailLink className="description" href={sectionUrl(entry, "图鉴介绍")} icon={BookOpenText} title="图鉴描述">
@@ -104,14 +110,14 @@ function DexDetailCard({ entry, detail, placement, mobile, onClose }) {
           </div>
         </DetailLink>
         <DetailLink className="evolution" href={sectionUrl(entry, "进化")} icon={MapPin} title="进化关系">
-          <EvolutionContent entry={entry} detail={detail} />
+          <EvolutionContent entry={entry} detail={detail} pixelMode={pixelMode} />
         </DetailLink>
       </div>
     </aside>
   );
 }
 
-function DexCard({ entry, detail, onMobileOpen }) {
+function DexCard({ entry, detail, onMobileOpen, pixelMode }) {
   const [active, setActive] = useState(false);
   const [placement, setPlacement] = useState({ left: 0, top: 104 });
   const cardRef = useRef(null);
@@ -150,12 +156,12 @@ function DexCard({ entry, detail, onMobileOpen }) {
     >
       <div className="dex-card-title"><strong>{entry.names["zh-Hans"]}</strong><span>#{String(entry.nationalDex).padStart(4, "0")}</span></div>
       {entry.formLabel && <span className="dex-form-label">{entry.formLabel}</span>}
-      <div className="dex-artwork-wrap"><img src={artworkUrl(entry)} alt={entry.names["zh-Hans"]} loading="lazy" /></div>
+      <div className="dex-artwork-wrap"><img src={artworkUrl(entry, pixelMode)} alt={entry.names["zh-Hans"]} loading="lazy" /></div>
       <div className="dex-card-meta">
         <div>{entry.typesZhHans.map((type) => <TypeBadge type={type} compact key={type} />)}</div>
         <span><MapPin size={12} />{REGION_BY_GENERATION[entry.generation]}</span>
       </div>
-      {active && <DexDetailCard entry={entry} detail={detail} placement={placement} />}
+      {active && <DexDetailCard entry={entry} detail={detail} placement={placement} pixelMode={pixelMode} />}
     </article>
   );
 }
@@ -178,6 +184,7 @@ export function NationalPokedex({ onOpenEditor }) {
   const [sort, setSort] = useState("asc");
   const [page, setPage] = useState(1);
   const [mobileEntry, setMobileEntry] = useState(null);
+  const [pixelMode, setPixelMode] = useState(() => localStorage.getItem(STYLE_STORAGE_KEY) === "pixel");
 
   useEffect(() => {
     Promise.all([
@@ -195,6 +202,11 @@ export function NationalPokedex({ onOpenEditor }) {
   }, []);
 
   useEffect(() => { setPage(1); }, [query, type, region, category, sort]);
+  useEffect(() => {
+    localStorage.setItem(STYLE_STORAGE_KEY, pixelMode ? "pixel" : "artwork");
+    document.body.classList.toggle("dex-pixel-body", pixelMode);
+    return () => document.body.classList.remove("dex-pixel-body");
+  }, [pixelMode]);
   useEffect(() => {
     const close = (event) => { if (event.key === "Escape") setMobileEntry(null); };
     window.addEventListener("keydown", close);
@@ -227,14 +239,20 @@ export function NationalPokedex({ onOpenEditor }) {
   const clearFilters = () => { setQuery(""); setType("全部"); setRegion("全部"); setCategory("全部"); setSort("asc"); };
 
   return (
-    <main className="dex-page">
+    <main className={`dex-page ${pixelMode ? "pixel-mode" : "artwork-mode"}`}>
       <div className="dex-breadcrumb"><a href="https://wiki.52poke.com/" target="_blank" rel="noreferrer">神奇宝贝百科</a><span>›</span><strong>全国图鉴</strong></div>
       <header className="dex-page-head">
         <div><p>POKÉDIY DATABASE</p><h1>全国图鉴</h1><span>从第一世代到第九世代，按属性、地区与分类浏览已有宝可梦。</span></div>
-        <button className="wiki-button primary" onClick={onOpenEditor}>制作我的宝可梦</button>
+        <div className="dex-head-actions">
+          <div className="dex-style-switch" role="group" aria-label="图鉴视觉风格">
+            <button className={!pixelMode ? "active" : ""} onClick={() => setPixelMode(false)} aria-pressed={!pixelMode}><ImageIcon size={15} />高清插画</button>
+            <button className={pixelMode ? "active" : ""} onClick={() => setPixelMode(true)} aria-pressed={pixelMode}><Gamepad2 size={15} />GBA像素</button>
+          </div>
+          <button className="wiki-button primary" onClick={onOpenEditor}>制作我的宝可梦</button>
+        </div>
       </header>
       <nav className="dex-tabs" aria-label="PokeDIY页面"><a className="active" href="#pokedex">全国图鉴</a><button onClick={onOpenEditor}>DIY创作台</button><a href="https://wiki.52poke.com/wiki/%E5%AE%9D%E5%8F%AF%E6%A2%A6%E5%88%97%E8%A1%A8%EF%BC%88%E6%8C%89%E5%85%A8%E5%9B%BD%E5%9B%BE%E9%89%B4%E7%BC%96%E5%8F%B7%EF%BC%89" target="_blank" rel="noreferrer">百科原始列表</a></nav>
-      <section className="dex-license"><BookOpenText size={16} /><p><strong>数据来源与许可</strong> 名称与百科链接来自神奇宝贝百科，遵循 CC BY-NC-SA 3.0；结构化资料与立绘分别由 PokeAPI 数据库及 sprites 仓库提供。角色图像版权归其权利人所有。</p></section>
+      <section className="dex-license"><BookOpenText size={16} /><p><strong>数据来源与许可</strong> 名称与百科链接来自神奇宝贝百科，遵循 CC BY-NC-SA 3.0；结构化资料、高清立绘与 Default 像素图来自 PokeAPI，像素界面边框与纹理由 pret/pokeemerald 提供。角色图像版权归其权利人所有。</p></section>
 
       <section className="dex-filters" aria-label="图鉴筛选">
         <div className="dex-filter-top">
@@ -258,7 +276,7 @@ export function NationalPokedex({ onOpenEditor }) {
       <div className="dex-results-head"><p><SlidersHorizontal size={16} />找到 <strong>{filtered.length}</strong> 个结果</p><span>将鼠标移到卡片上查看详情；触屏设备轻点卡片</span></div>
       {pageEntries.length ? (
         <section className="dex-grid" aria-live="polite">
-          {pageEntries.map((entry) => <DexCard entry={entry} detail={details[String(entry.nationalDex)]} onMobileOpen={setMobileEntry} key={`${entry.nationalDex}-${entry.formLabel || "base"}`} />)}
+          {pageEntries.map((entry) => <DexCard entry={entry} detail={details[String(entry.nationalDex)]} onMobileOpen={setMobileEntry} pixelMode={pixelMode} key={`${entry.nationalDex}-${entry.formLabel || "base"}`} />)}
         </section>
       ) : <div className="dex-empty"><Search size={28} /><h2>没有找到符合条件的宝可梦</h2><button className="wiki-button" onClick={clearFilters}>清除筛选</button></div>}
 
@@ -268,7 +286,7 @@ export function NationalPokedex({ onOpenEditor }) {
         <button disabled={page === pageCount} onClick={() => { setPage((value) => value + 1); window.scrollTo({ top: 470, behavior: "smooth" }); }}>下一页<ChevronRight size={17} /></button>
       </footer>
 
-      {mobileEntry && <div className="dex-mobile-scrim" onClick={() => setMobileEntry(null)}><div onClick={(event) => event.stopPropagation()}><DexDetailCard entry={mobileEntry} detail={details[String(mobileEntry.nationalDex)]} mobile onClose={() => setMobileEntry(null)} /></div></div>}
+      {mobileEntry && <div className="dex-mobile-scrim" onClick={() => setMobileEntry(null)}><div onClick={(event) => event.stopPropagation()}><DexDetailCard entry={mobileEntry} detail={details[String(mobileEntry.nationalDex)]} mobile onClose={() => setMobileEntry(null)} pixelMode={pixelMode} /></div></div>}
     </main>
   );
 }

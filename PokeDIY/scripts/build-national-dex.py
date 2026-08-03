@@ -24,8 +24,10 @@ ROOT = Path(__file__).resolve().parents[2]
 NATIONAL_PATH = ROOT / "data/national/national-pokedex.json"
 OUTPUT_PATH = ROOT / "data/national/pokemon-card-details.json"
 ARTWORK_DIR = ROOT / "data/assets/pokemon-art"
+PIXEL_ARTWORK_DIR = ROOT / "data/assets/pokemon-pixel"
 CSV_ROOT = "https://raw.githubusercontent.com/PokeAPI/pokeapi/master/data/v2/csv"
 ARTWORK_ROOT = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork"
+PIXEL_ARTWORK_ROOT = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon"
 ZH_HANS = "12"
 
 
@@ -67,6 +69,29 @@ def build_artwork() -> None:
             if completed % 100 == 0:
                 print(f"Artwork {completed}/1025", flush=True)
     print(f"Artwork ready: {written} written, {1025 - written} cached in {ARTWORK_DIR}")
+
+
+def build_pixel_artwork() -> None:
+    """Mirror PokeAPI's Default front sprites for the optional GBA theme."""
+    PIXEL_ARTWORK_DIR.mkdir(parents=True, exist_ok=True)
+
+    def download(national_dex: int) -> tuple[int, str]:
+        target = PIXEL_ARTWORK_DIR / f"{national_dex}.png"
+        if target.exists() and target.stat().st_size > 100:
+            return national_dex, "cached"
+        with urllib.request.urlopen(f"{PIXEL_ARTWORK_ROOT}/{national_dex}.png", timeout=45) as response:
+            target.write_bytes(response.read())
+        return national_dex, "written"
+
+    written = 0
+    with ThreadPoolExecutor(max_workers=24) as executor:
+        futures = [executor.submit(download, national_dex) for national_dex in range(1, 1026)]
+        for completed, future in enumerate(as_completed(futures), 1):
+            _, state = future.result()
+            written += state == "written"
+            if completed % 100 == 0:
+                print(f"Pixel artwork {completed}/1025", flush=True)
+    print(f"Pixel artwork ready: {written} written, {1025 - written} cached in {PIXEL_ARTWORK_DIR}")
 
 
 def main() -> None:
@@ -215,6 +240,8 @@ def main() -> None:
     print(f"Wrote {len(entries)} Pokédex card records to {OUTPUT_PATH}")
     if "--with-artwork" in sys.argv:
         build_artwork()
+    if "--with-pixel-artwork" in sys.argv:
+        build_pixel_artwork()
 
 
 if __name__ == "__main__":

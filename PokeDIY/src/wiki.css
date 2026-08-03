@@ -352,6 +352,7 @@ body {
   padding: 8px;
 }
 .dex-detail-section {
+  display: block;
   min-width: 0;
   overflow: hidden;
   border: 1px solid #a2a9b1;
@@ -2077,6 +2078,369 @@ a:hover {
     width: calc(100% - 20px);
     margin: 10px;
   }
+}
+
+/* Optional GBA Pokédex theme. Frame and texture tiles are sourced from pret/pokeemerald. */
+.dex-head-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.dex-style-switch {
+  height: 34px;
+  display: flex;
+  align-items: stretch;
+  border: 1px solid #a2a9b1;
+  background: #f8f9fa;
+}
+.dex-style-switch button {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  border: 0;
+  border-right: 1px solid #c8ccd1;
+  background: transparent;
+  padding: 0 9px;
+  color: #36c;
+  font-size: 11px;
+  cursor: pointer;
+}
+.dex-style-switch button:last-child { border-right: 0; }
+.dex-style-switch button.active { background: #eaecf0; color: #202122; font-weight: 700; }
+
+.dex-pixel-body {
+  --gba-navy: #172b54;
+  --gba-blue: #315f8c;
+  --gba-ink: #283048;
+  --gba-paper: #f7f4d8;
+  --gba-mint: #b8d88c;
+  --gba-green: #397048;
+  --gba-red: #c84c3c;
+  background-color: #d8ecc0;
+  background-image: url("/assets/gba-ui/bg-polkadot.png");
+  background-size: 32px 48px;
+  color: var(--gba-ink);
+  image-rendering: pixelated;
+}
+.dex-pixel-body,
+.dex-pixel-body button,
+.dex-pixel-body input,
+.dex-pixel-body select {
+  font-family: "Courier New", "SimSun", monospace;
+  font-smooth: never;
+  -webkit-font-smoothing: none;
+}
+.dex-pixel-body .mw-header {
+  position: relative;
+  height: 78px;
+  align-items: center;
+  border: 8px solid transparent;
+  border-image: url("/assets/gba-ui/text-window-blue.png") 8 / 8px / 0 stretch;
+  background: var(--gba-navy);
+  padding: 4px 12px;
+  color: white;
+  box-shadow: 0 5px 0 rgba(24, 43, 84, .45);
+}
+.dex-pixel-body .mw-menu,
+.dex-pixel-body .mw-mobile-search { color: white; }
+.dex-pixel-body .mw-brand {
+  border: 2px solid #9cc87c;
+  background: #f8f5d8;
+  padding: 3px 8px;
+  box-shadow: 2px 2px 0 #101c38;
+}
+.dex-pixel-body .mw-source-logo { width: 40px; height: 40px; }
+.dex-pixel-body .mw-source-wordmark { width: 138px; }
+.dex-pixel-body .mw-search {
+  border: 3px solid #18243f;
+  background: var(--gba-paper);
+  box-shadow: inset 0 0 0 2px #7b94a5, 3px 3px 0 #101c38;
+}
+.dex-pixel-body .mw-search input,
+.dex-pixel-body .mw-search button { background: var(--gba-paper); color: var(--gba-ink); }
+.dex-pixel-body .mw-search svg { color: var(--gba-ink); }
+.dex-pixel-body .mw-account a { color: #e5f6c8; text-shadow: 1px 1px 0 #101c38; }
+.dex-pixel-body .dex-page {
+  position: relative;
+  margin-top: 18px;
+  border: 8px solid transparent;
+  border-image: url("/assets/gba-ui/text-window-green.png") 8 / 8px / 0 stretch;
+  background-color: var(--gba-paper);
+  background-image: url("/assets/gba-ui/bg-dots.png");
+  background-size: 32px 16px;
+  padding: 20px;
+  box-shadow: 7px 7px 0 rgba(23,43,84,.48);
+}
+.dex-pixel-body .dex-breadcrumb {
+  margin-top: 0;
+  color: var(--gba-blue);
+  text-transform: uppercase;
+}
+.dex-pixel-body .dex-breadcrumb a,
+.dex-pixel-body .dex-tabs a,
+.dex-pixel-body .dex-tabs button { color: #244f7d; }
+.dex-pixel-body .dex-page-head {
+  min-height: 104px;
+  align-items: center;
+  border: 6px solid transparent;
+  border-image: url("/assets/gba-ui/text-window-blue.png") 8 / 8px / 0 stretch;
+  background: var(--gba-blue);
+  padding: 12px 14px;
+  color: white;
+  box-shadow: 4px 4px 0 #172b54;
+}
+.dex-pixel-body .dex-page-head p { color: #d5f0a4; text-shadow: 1px 1px 0 #172b54; }
+.dex-pixel-body .dex-page-head h1 {
+  font-family: "Courier New", "SimSun", monospace;
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: .08em;
+  text-shadow: 3px 3px 0 #172b54;
+}
+.dex-pixel-body .dex-page-head span { color: white; text-shadow: 1px 1px 0 #172b54; }
+.dex-pixel-body .dex-style-switch {
+  height: 40px;
+  border: 3px solid #101c38;
+  background: #e8edc9;
+  box-shadow: 3px 3px 0 #101c38;
+}
+.dex-pixel-body .dex-style-switch button {
+  border-color: #718360;
+  padding: 0 9px;
+  color: #29425d;
+  text-transform: uppercase;
+}
+.dex-pixel-body .dex-style-switch button.active {
+  background: var(--gba-green);
+  color: white;
+  text-shadow: 1px 1px 0 #172b54;
+}
+.dex-pixel-body .wiki-button {
+  min-height: 38px;
+  border: 3px solid #101c38;
+  border-radius: 0;
+  box-shadow: 3px 3px 0 #101c38;
+  font-weight: 800;
+}
+.dex-pixel-body .wiki-button.primary { background: #d94a3c; border-color: #6e231f; }
+.dex-pixel-body .dex-tabs {
+  height: 48px;
+  border-bottom: 3px solid #172b54;
+  gap: 8px;
+  padding: 7px 4px 0;
+}
+.dex-pixel-body .dex-tabs a,
+.dex-pixel-body .dex-tabs button {
+  border: 2px solid transparent;
+  padding: 0 9px;
+  font-weight: 700;
+}
+.dex-pixel-body .dex-tabs .active {
+  border-color: #172b54;
+  border-bottom-color: var(--gba-paper);
+  background: var(--gba-paper);
+  color: var(--gba-ink);
+  transform: translateY(3px);
+}
+.dex-pixel-body .dex-license {
+  border: 6px solid transparent;
+  border-image: url("/assets/gba-ui/text-window-blue.png") 8 / 8px / 0 stretch;
+  background: #f7f4d8;
+  padding: 9px 12px;
+  color: var(--gba-ink);
+  box-shadow: 3px 3px 0 rgba(23,43,84,.35);
+}
+.dex-pixel-body .dex-license svg { color: var(--gba-green); }
+.dex-pixel-body .dex-filters {
+  border: 6px solid transparent;
+  border-image: url("/assets/gba-ui/text-window-green.png") 8 / 8px / 0 stretch;
+  background: #eef2ce;
+  box-shadow: 4px 4px 0 rgba(23,43,84,.35);
+}
+.dex-pixel-body .dex-filter-top,
+.dex-pixel-body .dex-filter-row > strong { background: #d7e7b1; }
+.dex-pixel-body .dex-filter-top { border-bottom: 3px solid #456b56; }
+.dex-pixel-body .dex-filter-top label,
+.dex-pixel-body .dex-filter-top select,
+.dex-pixel-body .dex-filter-top > button {
+  border: 3px solid #304a5c;
+  border-radius: 0;
+  background: #fffde5;
+  box-shadow: 2px 2px 0 #839270;
+}
+.dex-pixel-body .dex-filter-top input { background: #fffde5; }
+.dex-pixel-body .dex-filter-row { border-bottom: 2px solid #8b9c75; }
+.dex-pixel-body .dex-filter-row > strong { border-right: 2px solid #8b9c75; color: #29425d; }
+.dex-pixel-body .dex-filter-row button {
+  min-height: 27px;
+  border: 2px solid transparent;
+  border-radius: 0;
+  color: #244f7d;
+  font-weight: 700;
+}
+.dex-pixel-body .dex-filter-row button:hover { border-color: #29425d; background: #fffde5; }
+.dex-pixel-body .dex-filter-row button.active {
+  border-color: #243c55;
+  background: #3c7650;
+  color: white;
+  box-shadow: 2px 2px 0 #839270;
+  text-shadow: 1px 1px 0 #172b54;
+}
+.dex-pixel-body .dex-filter-row button small { border-radius: 0; background: #dfe8b8; color: #29425d; }
+.dex-pixel-body .dex-filter-row .poke-type-icon {
+  border: 1px solid #172b54;
+  background-color: #315f8c;
+  box-shadow: 1px 1px 0 #839270;
+}
+.dex-pixel-body .dex-results-head {
+  margin-top: 12px;
+  border: 4px solid #2e4b5e;
+  background: #fffde5;
+  padding: 0 11px;
+  box-shadow: 3px 3px 0 #889675;
+}
+.dex-pixel-body .dex-results-head p strong { color: var(--gba-red); }
+.dex-pixel-body .dex-grid { gap: 14px; }
+.dex-pixel-body .dex-card {
+  min-height: 252px;
+  border: 8px solid transparent;
+  border-image: url("/assets/gba-ui/text-window-blue.png") 8 / 8px / 0 stretch;
+  border-radius: 0;
+  background:
+    linear-gradient(color-mix(in srgb, var(--dex-light) 42%, #fffde5), color-mix(in srgb, var(--dex-main) 18%, #fffde5)),
+    url("/assets/gba-ui/bg-dots.png");
+  box-shadow: 4px 4px 0 color-mix(in srgb, var(--dex-dark) 65%, #172b54);
+  padding: 7px;
+  transition: none;
+}
+.dex-pixel-body .dex-card:hover,
+.dex-pixel-body .dex-card:focus-within {
+  box-shadow: 6px 6px 0 #172b54;
+}
+.dex-pixel-body .dex-card-title strong {
+  font-family: "Courier New", "SimSun", monospace;
+  font-size: 15px;
+  font-weight: 800;
+  text-shadow: 1px 1px 0 rgba(255,255,255,.75);
+}
+.dex-pixel-body .dex-card-title span { font-size: 10px; }
+.dex-pixel-body .dex-form-label,
+.dex-pixel-body .dex-card-meta > span,
+.dex-pixel-body .poke-type-badge {
+  border-radius: 0;
+  box-shadow: 2px 2px 0 rgba(23,43,84,.42);
+}
+.dex-pixel-body .dex-form-label { border-width: 2px; background: #fffde5; }
+.dex-pixel-body .dex-artwork-wrap {
+  height: 166px;
+  border: 2px solid color-mix(in srgb, var(--dex-dark) 70%, #172b54);
+  background-color: rgba(255,255,255,.35);
+  background-image: url("/assets/gba-ui/bg-dots.png");
+  background-size: 32px 16px;
+}
+.dex-pixel-body .dex-artwork-wrap img {
+  width: 132px;
+  height: 132px;
+  object-fit: contain;
+  image-rendering: pixelated;
+  filter: drop-shadow(4px 4px 0 rgba(23,43,84,.22));
+}
+.dex-pixel-body .dex-card-meta { border-top: 2px solid var(--dex-dark); }
+.dex-pixel-body .poke-type-badge { height: 22px; border: 2px solid rgba(31,40,62,.75); line-height: 18px; }
+.dex-pixel-body .poke-type-badge > span:last-child { line-height: 18px; }
+.dex-pixel-body .poke-type-badge > .poke-type-icon { top: -1px; }
+.dex-pixel-body .dex-detail-card {
+  border: 8px solid transparent;
+  border-image: url("/assets/gba-ui/text-window-green.png") 8 / 8px / 0 stretch;
+  border-radius: 0;
+  background: #f7f4d8;
+  box-shadow: 8px 8px 0 rgba(23,43,84,.62);
+  animation: gba-detail-in .12s steps(2, end) both;
+}
+@keyframes gba-detail-in { from { opacity: 0; transform: translateY(8px); } }
+.dex-pixel-body .dex-detail-head {
+  border-bottom: 4px solid #172b54;
+  background:
+    linear-gradient(90deg, color-mix(in srgb, var(--dex-main) 32%, #eef2ce), #fffde5 75%),
+    url("/assets/gba-ui/bg-dots.png");
+}
+.dex-pixel-body .dex-detail-head h2,
+.dex-pixel-body .dex-detail-section h3 {
+  font-family: "Courier New", "SimSun", monospace;
+  font-weight: 800;
+  text-shadow: 1px 1px 0 white;
+}
+.dex-pixel-body .dex-detail-head img {
+  width: 92px;
+  height: 92px;
+  image-rendering: pixelated;
+  filter: drop-shadow(4px 4px 0 rgba(23,43,84,.22));
+}
+.dex-pixel-body .dex-detail-grid { gap: 6px; border: 0; background: #758b70; padding: 6px; }
+.dex-pixel-body .dex-detail-section {
+  border: 4px double #283048;
+  border-image: none;
+  border-radius: 0;
+  background: #fffde5 !important;
+  padding: 8px;
+  box-shadow: inset 0 0 0 1px #9aa67a;
+}
+.dex-pixel-body .dex-detail-section:hover { background: #f1f3c9; }
+.dex-pixel-body .dex-detail-section h3 { border-bottom: 2px solid #718360; color: #315f52; }
+.dex-pixel-body .dex-ability-list b { border-radius: 0; box-shadow: 2px 2px 0 #172b54; }
+.dex-pixel-body .dex-stat-list .poke-stat-meter i { border-radius: 0; border-width: 2px; }
+.dex-pixel-body .dex-stat-list .poke-stat-meter i b { border-radius: 0; }
+.dex-pixel-body .dex-evolution-line img {
+  image-rendering: pixelated;
+  filter: drop-shadow(2px 2px 0 rgba(23,43,84,.24));
+}
+.dex-pixel-body .dex-evolution-line .current { border-radius: 0; border: 2px solid #718360; }
+.dex-pixel-body .dex-pagination button {
+  min-width: 104px;
+  height: 38px;
+  border: 5px solid transparent;
+  border-image: url("/assets/gba-ui/text-window-blue.png") 8 / 6px / 0 stretch;
+  background: #fffde5;
+  box-shadow: 3px 3px 0 #839270;
+  color: #244f7d;
+  font-weight: 800;
+}
+.dex-pixel-body .dex-pagination button:disabled { filter: grayscale(1); opacity: .55; }
+.dex-pixel-body .dex-mobile-scrim { background: rgba(23,43,84,.68); }
+.dex-pixel-body .dex-detail-close { border: 3px solid #172b54; border-radius: 0; background: #fffde5; box-shadow: 2px 2px 0 #172b54; }
+
+@media (max-width: 760px) {
+  .dex-pixel-body .mw-header {
+    min-height: 105px;
+    border-left-width: 0;
+    border-right-width: 0;
+    padding: 8px 10px;
+  }
+  .dex-pixel-body .mw-brand { padding: 2px 5px; }
+  .dex-pixel-body .dex-page { width: calc(100% - 12px); margin-top: 8px; padding: 10px; box-shadow: 4px 4px 0 rgba(23,43,84,.48); }
+  .dex-pixel-body .dex-page-head { min-height: 150px; align-items: flex-start; }
+  .dex-pixel-body .dex-head-actions { width: 100%; align-items: stretch; }
+  .dex-pixel-body .dex-style-switch { width: 100%; }
+  .dex-pixel-body .dex-style-switch button { flex: 1; justify-content: center; }
+  .dex-pixel-body .dex-page-head .wiki-button { display: none; }
+  .dex-pixel-body .dex-filter-top { grid-template-columns: 1fr; }
+  .dex-pixel-body .dex-filter-top label { grid-column: auto; }
+  .dex-pixel-body .dex-filter-top > div,
+  .dex-pixel-body .dex-filter-top > button { width: 100%; }
+  .dex-pixel-body .dex-filter-top select { width: 100%; }
+  .dex-pixel-body .dex-card { min-height: 235px; }
+  .dex-pixel-body .dex-artwork-wrap { height: 148px; }
+  .dex-pixel-body .dex-artwork-wrap img { width: 116px; height: 116px; }
+  .dex-pixel-body .dex-detail-card.mobile { border-radius: 0; }
+}
+
+@media (max-width: 430px) {
+  .dex-pixel-body .dex-page-head h1 { font-size: 25px; }
+  .dex-pixel-body .dex-grid { gap: 10px; }
+  .dex-pixel-body .dex-card { min-height: 220px; border-width: 6px; padding: 5px; }
+  .dex-pixel-body .dex-artwork-wrap { height: 137px; }
+  .dex-pixel-body .dex-artwork-wrap img { width: 108px; height: 108px; }
+  .dex-pixel-body .dex-card-title strong { font-size: 13px; }
 }
 
 /* Final article preview: the 52Poké-style reading view. */
