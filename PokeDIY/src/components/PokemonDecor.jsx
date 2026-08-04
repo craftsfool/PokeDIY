@@ -50,7 +50,11 @@ export function getTypePalette(type) {
 
 export function TypeIcon({ type, size = 20 }) {
   const index = Math.max(0, typeOrder.indexOf(type))
-  return <span className="poke-type-icon" aria-hidden="true" style={{'--icon-scale':size / 20,'--icon-position':`${-index * 20}px`}}/>
+  return <span className="poke-type-icon" aria-hidden="true" style={{
+    '--icon-size': `${size}px`,
+    '--icon-sheet-height': `${size * 21}px`,
+    '--icon-position': `${-index * size}px`,
+  }}/>
 }
 
 export function TypeBadge({ type, compact = false }) {

@@ -198,21 +198,27 @@ body {
   padding: 3px 7px;
   color: #36c;
   font-size: 11px;
+  line-height: 1;
+  white-space: nowrap;
   cursor: pointer;
 }
 .dex-filter-row button:hover { background: #f8f9fa; border-color: #c8ccd1; }
 .dex-filter-row button.active { border-color: #36c; background: #eaf3ff; color: #202122; font-weight: 700; }
 .dex-filter-row button small {
   min-width: 18px;
+  min-height: 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 8px;
   background: #eaecf0;
   padding: 1px 4px;
   color: #72777d;
   font-size: 8px;
+  line-height: 1;
   text-align: center;
 }
 .dex-filter-row button.active small { background: white; color: #36c; }
-.dex-filter-row .poke-type-icon { width: 16px; height: 16px; background-size: 16px 336px; }
 .dex-results-head {
   min-height: 52px;
   display: flex;
@@ -997,14 +1003,14 @@ a:hover {
 }
 
 .poke-type-icon {
-  width: 20px;
-  height: 20px;
+  width: var(--icon-size, 20px);
+  height: var(--icon-size, 20px);
   display: inline-block;
   flex: none;
   background-image: url("/assets/MST_SV.webp");
   background-repeat: no-repeat;
   background-position: 0 var(--icon-position);
-  background-size: 20px 420px;
+  background-size: var(--icon-size, 20px) var(--icon-sheet-height, 420px);
   vertical-align: middle;
 }
 .poke-type-badge {
