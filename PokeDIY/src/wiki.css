@@ -2329,7 +2329,13 @@ a:hover {
   box-shadow: 2px 2px 0 #839270;
   font-size: 14px;
 }
-.dex-pixel-body .dex-filter-top input { background: #fffde5; font-size: 14px; }
+.dex-pixel-body .dex-filter-top label { overflow: hidden; }
+.dex-pixel-body .dex-filter-top input {
+  height: 100%;
+  min-height: 0;
+  background: #fffde5;
+  font-size: 14px;
+}
 .dex-pixel-body .dex-filter-row { border-bottom: 2px solid #8b9c75; }
 .dex-pixel-body .dex-filter-row > strong {
   border-right: 2px solid #8b9c75;
